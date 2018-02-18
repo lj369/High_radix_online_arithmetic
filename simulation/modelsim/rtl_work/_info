@@ -1,0 +1,150 @@
+m255
+K3
+13
+cModel Technology
+Z0 d\\icnas4.cc.ic.ac.uk\jl14314\Desktop\proj\simulation\modelsim
+vcalcVj
+IKSkVERR2IU5fBVW6AM_=22
+V;4T1E6JAd:?ION6Pa6@fN1
+Z1 d\\icnas4.cc.ic.ac.uk\jl14314\Desktop\proj\simulation\modelsim
+Z2 w1518443544
+Z3 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v
+Z4 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v
+L0 99
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1518443556.034000
+Z7 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj -O0
+ncalc@vj
+!i10b 1
+!s100 O?RG<O<T;iZ24bnnG^Pjf1
+!s85 0
+!s101 -O0
+vmultiplyByFour
+IOm5bFnmG2_6UY?3Ke4b>e0
+VmlQnZ7jab;ZQ:G5VG;=cf1
+R1
+R2
+R3
+R4
+L0 274
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+nmultiply@by@four
+!i10b 1
+!s100 >N3C8CW0TWheX380eMX>63
+!s85 0
+!s101 -O0
+vnegateX
+IV[HYM4>J7dSAGQ[Nl=ejA1
+VIdT7S;Z:cek0d[[^N`ONC2
+R1
+R2
+R3
+R4
+L0 362
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+nnegate@x
+!i10b 1
+!s100 07Z^gY_?S[j45:l^W;2312
+!s85 0
+!s101 -O0
+vonTheFlyConverterSignedDigit
+!i10b 1
+!s100 4leMM2ocDBnljV<0d7NL?2
+I10aET2RZ9?3hI0:[HC@6n2
+VIOQ8S9EBb]M<ZblUC5Yiz3
+R1
+w1518437574
+8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/onTheFlyConverterSignedDigit.v
+F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/onTheFlyConverterSignedDigit.v
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1518443557.047000
+!s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/onTheFlyConverterSignedDigit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/onTheFlyConverterSignedDigit.v|
+!s101 -O0
+R9
+R10
+non@the@fly@converter@signed@digit
+vradix4adder_new
+Igo>Tak0[lXloZ[EOMc5oB2
+V@b?feVIfboizI_e6W5_gU3
+R1
+w1518388445
+8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v
+F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v
+L0 2
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 LD2f8ZcIJC1ajd]F[FzUg1
+!s85 0
+!s108 1518443556.794000
+!s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v|
+!s101 -O0
+vradix4multiplier
+IMR=BGi=^nmY9H?4YiLRjA0
+V[zGd@=h=8X??@`F8JVaN<1
+R1
+R2
+R3
+R4
+L0 2
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 MMRcB`7dUOjO4JNT`42mM1
+!s85 0
+!s101 -O0
+vSELM
+I`l4_9FdCao1lR2:P]FS:[1
+VUl>85kll>TJRMBd]7h;dc0
+R1
+R2
+R3
+R4
+L0 172
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@s@e@l@m
+!i10b 1
+!s100 fBkoJSa_]d0@9iSlcC:LD1
+!s85 0
+!s101 -O0

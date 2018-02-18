@@ -1,0 +1,28 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\studies\FYP\Quaterus2_project\simulation\modelsim
+vradix4adder_sv
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 _ZL23b_d?MFmRJCF=ahLO0
+IhU4R1`333a510^WAU1`gH0
+V6SBL<Ck`VX6NXRGo1<DRK1
+!s105 radix4adder_sv_sv_unit
+S1
+Z1 dD:\studies\FYP\Quaterus2_project\simulation\modelsim
+w1512402264
+8D:/studies/FYP/Quaterus2_project/radix4adder_sv.sv
+FD:/studies/FYP/Quaterus2_project/radix4adder_sv.sv
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1512404500.604000
+!s107 D:/studies/FYP/Quaterus2_project/radix4adder_sv.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/studies/FYP/Quaterus2_project|D:/studies/FYP/Quaterus2_project/radix4adder_sv.sv|
+!s101 -O0
+o-sv -work work -O0
+!s92 -sv -work work +incdir+D:/studies/FYP/Quaterus2_project -O0
