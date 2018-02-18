@@ -1,0 +1,7 @@
+module onTheFlyConverterSignedDigit(
+	input signed [2:0] q,
+	input clk, 
+	input reset,
+	output reg [no_of_digits-1:0] Q
+);
+	parameter no_of_digits = 8;
