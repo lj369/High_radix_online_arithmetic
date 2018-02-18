@@ -1,4 +1,3 @@
 Warning (10268): Verilog HDL information at radix2adderSerial.v(24): always construct contains both blocking and non-blocking assignments
-Info (10281): Verilog HDL Declaration information at onTheFlyConverter.v(9): object "q" differs only in case from object "Q" in the same scope
 Info (10281): Verilog HDL Declaration information at onTheFlyConverterSignedDigit.v(10): object "q" differs only in case from object "Q" in the same scope
-Warning (10268): Verilog HDL information at radix4MultiplierTestbench.v(26): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at onTheFlyConverter.v(9): object "q" differs only in case from object "Q" in the same scope

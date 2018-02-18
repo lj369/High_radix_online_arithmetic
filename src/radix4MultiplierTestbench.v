@@ -16,50 +16,15 @@ module radix4MultiplierTestbench(
 
 	reg [no_of_digits*radix_bits-1:0] din1;
 	reg [no_of_digits*radix_bits-1:0] din2; 
-	reg [no_of_digits*radix_bits-1:0] dout; 
+	reg [(no_of_digits+1)*radix_bits-1:0] dout; 
 	reg clk;
 	integer counter;
-	reg [2:0] x;
-	reg [2:0] y;
-	wire [2:0] z;
-	
-	always @ (posedge clk)
-	begin
-		if (counter<no_of_digits)
-		// load input to SR
-		begin
-			x = din1[no_of_digits*radix_bits-1:(no_of_digits-1)*radix_bits];
-			y = din2[no_of_digits*radix_bits-1:(no_of_digits-1)*radix_bits];
-			din1 = {din1[(no_of_digits-1)*radix_bits-1:(no_of_digits-2)*radix_bits],{radix_bits{1'b0}}};
-			din2 = {din2[(no_of_digits-1)*radix_bits-1:(no_of_digits-2)*radix_bits],{radix_bits{1'b0}}};
-			end
-		else begin //clear input
-			x <= 3'd0;
-			y <= 3'd0;
-		end
-		if (counter>=delta)
-		// save output to SR
-		begin
-			dout = {dout[(no_of_digits-1)*radix_bits-1:(no_of_digits-2)*radix_bits],z};
-		end
-		counter <= counter + 1;
-		if (counter >= (no_of_digits+delta-1))
-		begin
-			counter <= 0;
-		end
-		
-	end
+	reg [radix_bits-1:0] x;
+	reg [radix_bits-1:0] y;
+	wire [radix_bits-1:0] z;
+	wire full_result_sel;
 	
 	
-	
-	
-	radix4multiplier #(no_of_digits, radix_bits, radix, delta) DUT1(
-		.x(x), 
-		.y(y),
-		.clk(clk), 
-		.z(z)
-	);
-
 	integer input_file; // file handler
 	integer scan_file; // file handler
 	integer output_file;
@@ -70,19 +35,67 @@ module radix4MultiplierTestbench(
 	always #5 clk = ~clk;
 	
 	initial begin
-	  input_file = $fopen("input_data.txt", "r");
+		input_file = $fopen("input_data.txt", "r");
 		output_file = $fopen("output.txt","w");
 		clk = 0;
+		full_result_sel = 1'b1
 		//cin = 0;
-		counter = 0;
+		counter = no_of_digits+delta+2-1;
 	   if (input_file == `NULL) begin
 			$display("data_file handle was NULL");
 			$finish;
 		end
 	end
+	
+	always @ (posedge clk)
+	begin
+		if (counter == no_of_digits+delta+2)begin
+			scan_file = $fscanf(input_file, "%b\t%b\n", input_data1, input_data2); 
+			if (!$feof(input_file)) begin
+					din1 = input_data1;
+					din2 = input_data2;
+			end
+		end
+		if (counter<no_of_digits)
+		// load input to SR
+		begin
+			x = din1[no_of_digits*radix_bits-1:(no_of_digits-1)*radix_bits];
+			y = din2[no_of_digits*radix_bits-1:(no_of_digits-1)*radix_bits];
+			din1 = {din1[(no_of_digits-1)*radix_bits-1:0],{radix_bits{1'b0}}};
+			din2 = {din2[(no_of_digits-1)*radix_bits-1:0],{radix_bits{1'b0}}};
+			end
+		else begin //clear input
+			x = {radix_bits{1'd0}};
+			y = {radix_bits{1'd0}};
+		end
+		if (counter>=delta-1 && counter<no_of_digits+delta)
+		// save output to SR
+		begin
+			dout = {dout[no_of_digits*radix_bits-1:0],z};
+		end
 
+		counter = counter + 1;
+		
+		if (counter > (no_of_digits+delta+2))
+		begin
+			counter = 0;
+		end
+	end
+	
+	
+	radix4multiplier #(no_of_digits, radix_bits, radix, delta) DUT1(
+		.x(x), 
+		.y(y),
+		.clk(clk), 
+		.z(z),
+		.full_result_sel(full_result_sel)
+	);
+
+	
+
+/*
 	always @(posedge clk) begin
-		if (counter >= (no_of_digits+delta-1))
+		if (counter >= (no_of_digits+delta+1))
 		begin
 			scan_file = $fscanf(input_file, "%b\t%b\n", input_data1, input_data2); 
 			if (!$feof(input_file)) begin
@@ -92,19 +105,21 @@ module radix4MultiplierTestbench(
 			end
 		end
 	end
-	
+*/
 	initial begin
-	for (i = 0; i<20; i=i+1) begin
+	for (i = 0; i<20*(no_of_digits+delta+2); i=i+1) begin
 		@(posedge clk);
       //data_out[i] <= dout;
-		#3
-      $display("LFSR %b %b %b", din1, din2, dout);
-      $fwrite(output_file,"%b\t%b\t%b%b\n",din1, din2, dout);
+		if (counter >= (no_of_digits+delta+2))begin
+			#2
+			$display("LFSR %b %b %b", input_data1, input_data2, dout);
+			$fwrite(output_file,"%b\t%b\t%b\n",input_data1, input_data2, dout);
+		end
    end
 
-   $fclose(output_file);  
-	 $fclose(input_file);
-   $finish;
+	$fclose(output_file);  
+	$fclose(input_file);
+	$finish;
 	end
 	
 	

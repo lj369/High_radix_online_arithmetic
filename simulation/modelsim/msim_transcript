@@ -10,71 +10,70 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v}
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4SELM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module radix4SELM
+# 
+# Top level modules:
+# 	radix4SELM
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4DigitMultiply.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module radix4DigitMultiply
+# 
+# Top level modules:
+# 	radix4DigitMultiply
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4calcVj.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module radix4calcVj
+# 
+# Top level modules:
+# 	radix4calcVj
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4multiplier.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module radix4multiplier
-# -- Compiling module calcVj
-# -- Compiling module SELM
-# -- Compiling module multiplyByFour
-# -- Compiling module negateX
 # 
 # Top level modules:
 # 	radix4multiplier
-# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v}
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4adder_new.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module radix4adder_new
 # 
 # Top level modules:
 # 	radix4adder_new
-# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/onTheFlyConverterSignedDigit.v}
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/onTheFlyConverterSignedDigit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module onTheFlyConverterSignedDigit
 # 
 # Top level modules:
 # 	onTheFlyConverterSignedDigit
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/negateX.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module negateX
+# 
+# Top level modules:
+# 	negateX
+# vlog -vlog01compat -work work +incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src {//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module radix4WModification
+# 
+# Top level modules:
+# 	radix4WModification
 # 
 vsim work.radix4multiplier
 # vsim work.radix4multiplier 
 # Loading work.radix4multiplier
 # Loading work.onTheFlyConverterSignedDigit
-# Loading work.calcVj
-# Loading work.multiplyByFour
+# Loading work.radix4calcVj
+# Loading work.radix4DigitMultiply
 # Loading work.negateX
 # Loading work.radix4adder_new
-# Loading work.SELM
-# ** Warning: (vsim-3015) //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v(151): [PCDPC] - Port size (15 or 15) does not match connection size (12) for port 'dout'. The port definition is at: //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v(6).
-# 
-#         Region: /radix4multiplier/Vj_1/adder_1
-# ** Warning: (vsim-3015) //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4multiplier.v(71): [PCDPC] - Port size (15 or 15) does not match connection size (12) for port 'dout'. The port definition is at: //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/radix4adder_new.v(6).
-# 
-#         Region: /radix4multiplier/adder_2
-add wave -position insertpoint  \
-sim:/radix4multiplier/y \
-sim:/radix4multiplier/x \
-sim:/radix4multiplier/reset
-add wave -position insertpoint  \
-sim:/radix4multiplier/Y_j \
-sim:/radix4multiplier/X_j
-add wave -position insertpoint  \
-sim:/radix4multiplier/W_j_1 \
-sim:/radix4multiplier/V_j
-add wave -position insertpoint  \
-sim:/radix4multiplier/W_j
-add wave -position insertpoint  \
-sim:/radix4multiplier/Y_j
-add wave -position insertpoint  \
-sim:/radix4multiplier/clk
-add wave -position insertpoint  \
-sim:/radix4multiplier/counter
-force -freeze sim:/radix4multiplier/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/radix4multiplier/y 0 0
-force -freeze sim:/radix4multiplier/x 0 0
-run 100ns
-force -freeze sim:/radix4multiplier/x 1 0
-force -freeze sim:/radix4multiplier/y 1 0
-run 100ns
-add wave -position insertpoint  \
-sim:/radix4multiplier/z
-add wave -position insertpoint  \
-sim:/radix4multiplier/z
-run 100ns
+# Loading work.radix4SELM
+# Loading work.radix4WModification
+do temp_1.do
+run 3ns
+restart
+do temp_1.do
+run 3ns
+restart
+do temp_1.do
+run 3ns

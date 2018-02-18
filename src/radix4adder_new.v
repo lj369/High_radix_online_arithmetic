@@ -32,7 +32,7 @@ module radix4adder_new(
 		begin : alway_block
 			integer a,b,sum;
 			a = $signed(din1[(i+1)*radix_bits-1:i*radix_bits]);
-			b = $signed(din2[(i+1)*radix_bits-1:i*radix_bits]);				w[(i+1)*radix_bits-1:i*radix_bits] = sum;
+			b = $signed(din2[(i+1)*radix_bits-1:i*radix_bits]);
 
 			sum = a + b;
 			if ($signed(sum)>=radix)
@@ -47,6 +47,7 @@ module radix4adder_new(
 			else
 			begin
 				t[2*i+1:2*i] = 2'b0;
+				w[(i+1)*radix_bits-1:i*radix_bits] = sum;
 			end
 		end
 	end

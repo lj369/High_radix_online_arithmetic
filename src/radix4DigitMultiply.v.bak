@@ -1,0 +1,145 @@
+module multiplyByFour(
+	din1,
+	din2,
+	dout
+);
+	
+	parameter no_of_digits = 4;
+	parameter radix_bits = 3;
+	parameter radix = 4;
+	
+	input [no_of_digits*radix_bits-1:0] din1;
+	input signed [radix_bits-1:0] din2;
+	output signed [(no_of_digits+1)*radix_bits-1:0] dout;
+	
+	wire signed [no_of_digits*radix_bits-1:0] neg_din1_pre;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] pos_one_din1;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] neg_one_din1;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] pos_four_din1;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] neg_four_din1;
+	
+	
+	assign pos_one_din1 = {{radix_bits{1'b0}},din1};
+	
+	assign pos_four_din1 = {din1, {radix_bits{1'b0}}};
+	
+	negateX #(no_of_digits, radix_bits, radix) negate1(
+		.x_in(din1),
+		.x_out(neg_din1_pre)
+	);
+	
+	assign neg_one_din1 = {{radix_bits{1'b0}},neg_din1_pre};
+	
+	assign neg_four_din1 = {neg_din1_pre, {radix_bits{1'b0}}};
+	
+	
+	// new implementation
+	reg signed [(no_of_digits+1)*radix_bits-1:0] mult_in1;
+	reg signed [(no_of_digits+1)*radix_bits-1:0] mult_in2;
+	
+	always @ (*)
+	begin: always_block
+		integer temp;
+		temp = $signed(din2);
+		case(temp)
+			-3: begin
+				mult_in1 = neg_four_din1;
+				mult_in2 = pos_one_din1;
+			end
+			-2: begin
+				mult_in1 = neg_one_din1;
+				mult_in2 = neg_one_din1;
+			end
+			-1: begin
+				mult_in1 = {(no_of_digits+1)*radix_bits{1'b0}};
+				mult_in2 = neg_one_din1;
+			end
+			-0: begin
+				mult_in1 = {(no_of_digits+1)*radix_bits{1'b0}};
+				mult_in2 = {(no_of_digits+1)*radix_bits{1'b0}};
+			end
+			1: begin
+				mult_in1 = {(no_of_digits+1)*radix_bits{1'b0}};
+				mult_in2 = pos_one_din1;
+			end
+			2: begin
+				mult_in1 = pos_one_din1;
+				mult_in2 = pos_one_din1;
+			end
+			3: begin
+				mult_in1 = pos_four_din1;
+				mult_in2 = neg_one_din1;
+			end
+			default: begin
+				mult_in1 = 0;
+				mult_in2 = 0;
+			end
+		endcase
+	end
+		
+	radix4adder_new #(no_of_digits+1,radix_bits,radix) adder_pos_two(
+		.din1(mult_in1),
+		.din2(mult_in2),
+		.cin(3'b0),
+		.dout(dout),
+		.cout()
+	);
+	
+	/*
+	// old implementation
+	wire signed [(no_of_digits+1)*radix_bits-1:0] pos_two_din1;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] neg_two_din1;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] pos_three_din1;
+	wire signed [(no_of_digits+1)*radix_bits-1:0] neg_three_din1;	
+	
+	radix4adder_new #(no_of_digits+1,radix_bits,radix) adder_pos_two(
+		.din1(pos_one_din1),
+		.din2(pos_one_din1),
+		.cin(3'b0),
+		.dout(pos_two_din1),
+		.cout()
+	);
+	
+	radix4adder_new #(no_of_digits+1,radix_bits,radix) adder_pos_three(
+		.din1(pos_four_din1),
+		.din2(neg_one_din1),
+		.cin(3'b0),
+		.dout(pos_three_din1),
+		.cout()
+	);
+	
+	radix4adder_new #(no_of_digits+1,radix_bits,radix) adder_neg_two(
+		.din1(neg_one_din1),
+		.din2(neg_one_din1),
+		.cin(3'b0),
+		.dout(neg_two_din1),
+		.cout()
+	);
+	
+	radix4adder_new #(no_of_digits+1,radix_bits,radix) adder_neg_three(
+		.din1(neg_four_din1),
+		.din2(pos_one_din1),
+		.cin(3'b0),
+		.dout(neg_three_din1),
+		.cout()
+	);
+	
+	always @ * begin: alway_block
+		integer temp;
+		temp = $signed(din2);
+		case(temp)
+			-3: dout = neg_three_din1;
+			-2: dout = neg_two_din1;
+			-1: dout = neg_one_din1;
+			0: dout = 0;
+			1: dout = pos_one_din1;
+			2: dout = pos_two_din1;
+			3: dout = pos_three_din1;
+			default: dout = 0;
+		endcase
+	end
+	*/
+	
+
+endmodule
+

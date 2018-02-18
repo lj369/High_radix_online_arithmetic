@@ -1,3 +1,4 @@
+
 entity radix_2_adder is
 	port(
 		din1p, din1n, din2p, din2n, cin, clk: in std_logic;
@@ -24,3 +25,4 @@ begin
 	end process P1;
 
 end
+
