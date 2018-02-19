@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity radix4multiplier is
     generic(
-        no_of_digits    : integer := 16;
+        no_of_digits    : integer := 4;
         radix_bits      : integer := 3;
         radix           : integer := 4;
         delta           : integer := 2
