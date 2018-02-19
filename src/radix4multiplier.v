@@ -4,10 +4,11 @@ module radix4multiplier(
 	y,
 	clk,
 	z,
-	full_result_sel
+	full_result_sel,
+	extern_reset
 	);
 
-	parameter no_of_digits = 4;
+	parameter no_of_digits = 16;
 	parameter radix_bits = 3;
 	parameter radix = 4;
 	parameter delta = 2;
@@ -16,6 +17,7 @@ module radix4multiplier(
 	input [radix_bits-1:0] y;
 	input clk;
 	input full_result_sel;
+	input extern_reset;
 	output wire [radix_bits-1:0] z;
 	
 	wire [no_of_digits*radix_bits-1:0] X_j, Y_j;
@@ -114,17 +116,15 @@ module radix4multiplier(
 		begin
 			reset = 1'b0;
 		end
-		if (full_result_sel == 1'b0)begin
-			if (counter > delta+no_of_digits)
-			begin
-				reset = 1'b1;
-			end
+		if (extern_reset == 1'b1)
+		begin
+			reset = 1'b1;
 		end
-		else begin
-			if (counter > 2*no_of_digits+delta)
-			begin
-				reset = 1'b1;
-			end
+		if (full_result_sel == 1'b0 && counter > delta+no_of_digits)begin
+			reset = 1'b1;
+		end
+		else if (full_result_sel == 1'b1 && counter > 2*no_of_digits+delta)begin
+			reset = 1'b1;
 		end
 	end
 	

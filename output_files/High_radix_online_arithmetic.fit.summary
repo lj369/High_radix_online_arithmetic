@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sun Feb 18 23:23:07 2018
+Fitter Status : Successful - Mon Feb 19 14:36:10 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : High_radix_online_arithmetic
-Top-level Entity Name : radix4multiplier
+Top-level Entity Name : radix4adder_new
 Family : Cyclone III
 Device : EP3C5F256C6
 Timing Models : Final
-Total logic elements : 575 / 5,136 ( 11 % )
-    Total combinational functions : 573 / 5,136 ( 11 % )
-    Dedicated logic registers : 109 / 5,136 ( 2 % )
-Total registers : 109
-Total pins : 10 / 183 ( 5 % )
+Total logic elements : 80 / 5,136 ( 2 % )
+    Total combinational functions : 80 / 5,136 ( 2 % )
+    Dedicated logic registers : 0 / 5,136 ( 0 % )
+Total registers : 0
+Total pins : 78 / 183 ( 43 % )
 Total virtual pins : 0
 Total memory bits : 0 / 423,936 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )

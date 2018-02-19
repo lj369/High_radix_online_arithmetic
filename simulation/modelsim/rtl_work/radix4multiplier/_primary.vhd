@@ -11,7 +11,9 @@ entity radix4multiplier is
         x               : in     vl_logic_vector;
         y               : in     vl_logic_vector;
         clk             : in     vl_logic;
-        z               : out    vl_logic_vector
+        z               : out    vl_logic_vector;
+        full_result_sel : in     vl_logic;
+        extern_reset    : in     vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of no_of_digits : constant is 1;

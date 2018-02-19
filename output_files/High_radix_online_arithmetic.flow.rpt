@@ -1,5 +1,5 @@
 Flow report for High_radix_online_arithmetic
-Sun Feb 18 23:23:26 2018
+Mon Feb 19 14:36:27 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 18 23:23:26 2018            ;
+; Flow Status                        ; Successful - Mon Feb 19 14:36:27 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; High_radix_online_arithmetic                     ;
-; Top-level Entity Name              ; radix4multiplier                                 ;
+; Top-level Entity Name              ; radix4adder_new                                  ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 575 / 5,136 ( 11 % )                             ;
-;     Total combinational functions  ; 573 / 5,136 ( 11 % )                             ;
-;     Dedicated logic registers      ; 109 / 5,136 ( 2 % )                              ;
-; Total registers                    ; 109                                              ;
-; Total pins                         ; 10 / 183 ( 5 % )                                 ;
+; Total logic elements               ; 80 / 5,136 ( 2 % )                               ;
+;     Total combinational functions  ; 80 / 5,136 ( 2 % )                               ;
+;     Dedicated logic registers      ; 0 / 5,136 ( 0 % )                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 78 / 183 ( 43 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                                   ;
@@ -64,26 +64,26 @@ applicable agreement for further details.
 +-------------------+------------------------------+
 ; Option            ; Setting                      ;
 +-------------------+------------------------------+
-; Start date & time ; 02/18/2018 23:22:53          ;
+; Start date & time ; 02/19/2018 14:35:59          ;
 ; Main task         ; Compilation                  ;
 ; Revision Name     ; High_radix_online_arithmetic ;
 +-------------------+------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                         ;
-+-------------------------------------+---------------------------------+------------------------------+------------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value                ; Entity Name      ; Section Id     ;
-+-------------------------------------+---------------------------------+------------------------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 176831338576819.151899617210204 ; --                           ; --               ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --                           ; --               ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>                       ; --               ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --                           ; radix4multiplier ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --                           ; radix4multiplier ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --                           ; radix4multiplier ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --                           ; --               ; --             ;
-; TOP_LEVEL_ENTITY                    ; radix4multiplier                ; High_radix_online_arithmetic ; --               ; --             ;
-+-------------------------------------+---------------------------------+------------------------------+------------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                       ;
++-------------------------------------+--------------------------------+------------------------------+-----------------+----------------+
+; Assignment Name                     ; Value                          ; Default Value                ; Entity Name     ; Section Id     ;
++-------------------------------------+--------------------------------+------------------------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 79232739773109.151905095901240 ; --                           ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --                           ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>                       ; --              ; --             ;
+; PARTITION_COLOR                     ; 16764057                       ; --                           ; radix4adder_new ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --                           ; radix4adder_new ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --                           ; radix4adder_new ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --                           ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; radix4adder_new                ; High_radix_online_arithmetic ; --              ; --             ;
++-------------------------------------+--------------------------------+------------------------------+-----------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -91,12 +91,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 470 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:08     ; 2.1                     ; 1119 MB             ; 00:00:08                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 471 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.6                     ; 1087 MB             ; 00:00:05                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 412 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 497 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 403 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:16                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 480 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 387 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,11 +105,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; eews304-008      ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; eews304-008      ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; eews304-008      ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; eews304-008      ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; eews304-008      ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; eews305-014      ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews305-014      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews305-014      ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews305-014      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; eews305-014      ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

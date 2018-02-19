@@ -3,7 +3,8 @@ module radix2multiplier(
 	x,
 	y,
 	clk,
-	z
+	z,
+	full_result_sel
 	);
 
 	parameter no_of_digits = 4;
@@ -14,6 +15,7 @@ module radix2multiplier(
 	input [radix_bits-1:0] x;
 	input [radix_bits-1:0] y;
 	input clk;
+	input full_result_sel;
 	output wire [radix_bits-1:0] z;
 	
 	wire [no_of_digits*radix_bits-1:0] X_j, Y_j;
