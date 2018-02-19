@@ -17,13 +17,13 @@ module radix4WModification(
 		w_out = w_in;
 		d1 = $signed(w_in[radix_bits*(no_of_digits+delta+1)-1:radix_bits*(no_of_digits+delta)]); 
 		d2 = $signed(w_in[radix_bits*(no_of_digits+delta)-1:radix_bits*(no_of_digits+delta-1)]); 
-		if (d1 == -1 && d2>0)begin
-			w_out[radix_bits*(no_of_digits+delta)-1:radix_bits*(no_of_digits+delta-1)] = d2 - 4;
+		if (d1 == -1)begin
+			w_out[radix_bits*(no_of_digits+delta)-1:radix_bits*(no_of_digits+delta-1)] = d2 - radix;
 			w_out[radix_bits*(no_of_digits+delta+1)-1:radix_bits*(no_of_digits+delta)] = {radix_bits{1'b0}};
 		end
-		else if (d1 == 1 && d2<0)begin
+		else if (d1 == 1)begin
 			w_out[radix_bits*(no_of_digits+delta+1)-1:radix_bits*(no_of_digits+delta)] = {radix_bits{1'b0}};
-			w_out[radix_bits*(no_of_digits+delta)-1:radix_bits*(no_of_digits+delta-1)] = d2 + 4;
+			w_out[radix_bits*(no_of_digits+delta)-1:radix_bits*(no_of_digits+delta-1)] = d2 + radix;
 		end
 	end
 

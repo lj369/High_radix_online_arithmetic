@@ -4,9 +4,9 @@ module radix2DigitMultiply(
 	dout
 );
 	
-	parameter no_of_digits = 4;
-	parameter radix_bits = 3;
-	parameter radix = 4;
+	parameter no_of_digits = 8;
+	parameter radix_bits = 2;
+	parameter radix = 2;
 	
 	input [no_of_digits*radix_bits-1:0] din1;
 	input signed [radix_bits-1:0] din2;

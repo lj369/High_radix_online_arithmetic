@@ -20,7 +20,7 @@ nnegate@x
 !i10b 1
 !s100 zX0Ph3aaHG9KAcK:XiWb21
 !s85 0
-!s108 1519054202.011000
+!s108 1519059826.722000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/negateX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/negateX.v|
 !s101 -O0
@@ -41,7 +41,7 @@ non@the@fly@converter@signed@digit
 !i10b 1
 !s100 3mICL8aI?Wg[gM@l<^i>L0
 !s85 0
-!s108 1519054201.695000
+!s108 1519059826.466000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/onTheFlyConverterSignedDigit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/onTheFlyConverterSignedDigit.v|
 !s101 -O0
@@ -61,7 +61,7 @@ R4
 !i10b 1
 !s100 Z<ZZ=YlG7AWg>]4Z7AGMO3
 !s85 0
-!s108 1519054201.369000
+!s108 1519059826.163000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4adder_new.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4adder_new.v|
 !s101 -O0
@@ -82,7 +82,7 @@ nradix4calc@vj
 !i10b 1
 !s100 W07KK64IE3>Pjc5ll>zXh1
 !s85 0
-!s108 1519054199.265000
+!s108 1519059825.608000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4calcVj.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4calcVj.v|
 !s101 -O0
@@ -103,7 +103,7 @@ nradix4@digit@multiply
 !i10b 1
 !s100 2]dknND`eClMOMjdTW3Tg0
 !s85 0
-!s108 1519054198.980000
+!s108 1519059825.285000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4DigitMultiply.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4DigitMultiply.v|
 !s101 -O0
@@ -123,7 +123,7 @@ R4
 !i10b 1
 !s100 jR9I]h7WzW:kM]Wl]@RS^1
 !s85 0
-!s108 1519054199.607000
+!s108 1519059825.897000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4multiplier.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4multiplier.v|
 !s101 -O0
@@ -144,17 +144,17 @@ R4
 !i10b 1
 !s100 `1WP3>eV3jfoS`fVkZ;]G0
 !s85 0
-!s108 1519054198.697000
+!s108 1519059824.992000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4SELM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4SELM.v|
 !s101 -O0
 vradix4WModification
 !i10b 1
-!s100 VSXjnb3;aF5L^dgllB84T1
-IoW;GTdWi]Kn1WzmDKQdP33
+!s100 jV?5ZHKFECk]Vbeg84Z8`3
+ImXT`>`Wb::hKDjm1OO[[:0
 VadKzjBb6jMB5lij8LZghe0
 R1
-w1518993240
+w1519057601
 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v
 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v
 L0 1
@@ -162,7 +162,7 @@ R2
 r1
 !s85 0
 31
-!s108 1519054202.263000
+!s108 1519059827.057000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v|
 !s101 -O0

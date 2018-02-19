@@ -1,5 +1,5 @@
 Flow report for High_radix_online_arithmetic
-Mon Feb 19 15:29:46 2018
+Mon Feb 19 17:03:33 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 19 15:29:46 2018            ;
+; Flow Status                        ; Successful - Mon Feb 19 17:03:33 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; High_radix_online_arithmetic                     ;
 ; Top-level Entity Name              ; radix4multiplier                                 ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 583 / 5,136 ( 11 % )                             ;
-;     Total combinational functions  ; 576 / 5,136 ( 11 % )                             ;
+; Total logic elements               ; 578 / 5,136 ( 11 % )                             ;
+;     Total combinational functions  ; 573 / 5,136 ( 11 % )                             ;
 ;     Dedicated logic registers      ; 110 / 5,136 ( 2 % )                              ;
 ; Total registers                    ; 110                                              ;
 ; Total pins                         ; 12 / 183 ( 7 % )                                 ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+------------------------------+
 ; Option            ; Setting                      ;
 +-------------------+------------------------------+
-; Start date & time ; 02/19/2018 15:29:11          ;
+; Start date & time ; 02/19/2018 17:02:58          ;
 ; Main task         ; Compilation                  ;
 ; Revision Name     ; High_radix_online_arithmetic ;
 +-------------------+------------------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+------------------------------+------------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value                ; Entity Name      ; Section Id     ;
 +-------------------------------------+--------------------------------+------------------------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 79232739773109.151905415105944 ; --                           ; --               ; --             ;
+; COMPILER_SIGNATURE_ID               ; 79232739773109.151905977811256 ; --                           ; --               ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --                           ; --               ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>                       ; --               ; --             ;
 ; PARTITION_COLOR                     ; 16764057                       ; --                           ; radix4multiplier ; Top            ;
@@ -91,12 +91,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 470 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:08     ; 1.8                     ; 1125 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 408 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 497 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 403 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 470 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:08     ; 1.9                     ; 1120 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 412 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 497 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 403 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:15                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

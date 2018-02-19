@@ -70,6 +70,4 @@ vsim work.radix4multiplier
 # Loading work.radix4SELM
 # Loading work.radix4WModification
 do temp_1.do
-add wave -position insertpoint  \
-sim:/radix4multiplier/counter
-run 10ns
+run 13ns

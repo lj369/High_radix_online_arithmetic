@@ -124,171 +124,171 @@ Z57 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/onTheFlyConverterSignedDigit
 !s85 0
 !s101 -O0
 vradix4adder_new
-Z58 IX6WUcRSa=;`TT02?W8lh41
-Z59 V@b?feVIfboizI_e6W5_gU3
+Z58 !s100 KD[FRaBn2j[35W>4l1XD]2
+Z59 IX6WUcRSa=;`TT02?W8lh41
+Z60 V@b?feVIfboizI_e6W5_gU3
 R4
-Z60 w1518970945
-Z61 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v
-Z62 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v
+Z61 w1518970945
+Z62 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v
+Z63 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v
 L0 2
 R8
 r1
 31
+Z64 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v|
 R10
-Z63 !s100 KD[FRaBn2j[35W>4l1XD]2
-Z64 !s108 1519053218.252000
-Z65 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v|
-Z66 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v|
+Z65 !s108 1519054759.441000
+Z66 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4adder_new.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vradix4AdderTestbench
-Z67 I5;_6@[VR6[Z^<aiOm18G=1
-Z68 V>o8][CNf?bJo5;3QH9Y<o2
+Z67 !s100 WjQ1;Q]]?hgm7MzCfa;@o3
+Z68 I5;_6@[VR6[Z^<aiOm18G=1
+Z69 V>o8][CNf?bJo5;3QH9Y<o2
 R4
-Z69 w1518438614
-Z70 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v
-Z71 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v
+Z70 w1518438614
+Z71 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v
+Z72 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v
 L0 2
 R8
 r1
 31
+Z73 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v|
 R10
-Z72 nradix4@adder@testbench
-Z73 !s100 WjQ1;Q]]?hgm7MzCfa;@o3
-Z74 !s108 1519053218.551000
-Z75 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v|
-Z76 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v|
+Z74 nradix4@adder@testbench
+Z75 !s108 1519054759.711000
+Z76 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4AdderTestbench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vradix4calcVj
-Z77 I@jkn8>=?JKI`[U2[Cjn1Y2
-Z78 V6P^DaLW3c1KdP3WD`^D2;0
+Z77 !s100 `ozZJ@zZe<g?dbUS<lo=Y2
+Z78 I@jkn8>=?JKI`[U2[Cjn1Y2
+Z79 V6P^DaLW3c1KdP3WD`^D2;0
 R4
-Z79 w1518986009
-Z80 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v
-Z81 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v
+Z80 w1518986009
+Z81 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v
+Z82 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v
 L0 2
 R8
 r1
 31
+Z83 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v|
 R10
-Z82 nradix4calc@vj
-Z83 !s100 `ozZJ@zZe<g?dbUS<lo=Y2
-Z84 !s108 1519053218.846000
-Z85 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v|
-Z86 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v|
+Z84 nradix4calc@vj
+Z85 !s108 1519054760.001000
+Z86 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4calcVj.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vradix4DigitMultiply
-Z87 I_fPb1b5Z@<JMb=Kcm_;F]1
-Z88 Vn6Gfe:K?T=GYc3UMnd7Lh3
+Z87 !s100 ]oLKDk`PDi`KJI[MHReiY1
+Z88 I_fPb1b5Z@<JMb=Kcm_;F]1
+Z89 Vn6Gfe:K?T=GYc3UMnd7Lh3
 R4
-Z89 w1518975824
-Z90 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v
-Z91 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v
+Z90 w1518975824
+Z91 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v
+Z92 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v
 L0 1
 R8
 r1
 31
+Z93 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v|
 R10
-Z92 nradix4@digit@multiply
-Z93 !s100 ]oLKDk`PDi`KJI[MHReiY1
-Z94 !s108 1519053219.150000
-Z95 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v|
-Z96 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v|
+Z94 nradix4@digit@multiply
+Z95 !s108 1519054760.289000
+Z96 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4DigitMultiply.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vradix4multiplier
-Z97 IE5YYzNo5Q0nQiSE:Ho0^P0
-Z98 VlAmD2]MnE[fJJ3Qo;ccbF1
+Z97 !s100 FI>OU^n>2][?dJ[^2e3?i2
+Z98 IE5YYzNo5Q0nQiSE:Ho0^P0
+Z99 VlAmD2]MnE[fJJ3Qo;ccbF1
 R4
-Z99 w1519050201
-Z100 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v
-Z101 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v
+Z100 w1519050201
+Z101 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v
+Z102 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v
 L0 2
 R8
 r1
 31
+Z103 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v|
 R10
-Z102 !s100 FI>OU^n>2][?dJ[^2e3?i2
-Z103 !s108 1519053219.456000
-Z104 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v|
-Z105 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v|
+Z104 !s108 1519054761.632000
+Z105 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4multiplier.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vradix4MultiplierTestbench
-Z106 I0`?I6iJlC=Y4;Bnb1_WUQ0
-Z107 V[fm>N7h>KEC_NBYUIHokS2
+Z106 !s100 Y9kQ?Wmc@B18dLJ<>j`Cd0
+Z107 I0`?I6iJlC=Y4;Bnb1_WUQ0
+Z108 V[fm>N7h>KEC_NBYUIHokS2
 R4
-Z108 w1519048550
-Z109 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v
-Z110 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v
+Z109 w1519048550
+Z110 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v
+Z111 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v
 L0 2
 R8
 r1
 31
+Z112 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v|
 R10
-Z111 nradix4@multiplier@testbench
-Z112 !s100 Y9kQ?Wmc@B18dLJ<>j`Cd0
-Z113 !s108 1519053219.758000
-Z114 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v|
-Z115 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v|
+Z113 nradix4@multiplier@testbench
+Z114 !s108 1519054761.955000
+Z115 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4MultiplierTestbench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vradix4SELM
-Z116 IOCmNe[9[=n?RNCAZ7ca`X2
-Z117 V0SYO?g;gQ0A=9TemX@WA[0
+Z116 !s100 R9XXXCJ^ZFiLloBB39c]h1
+Z117 IOCmNe[9[=n?RNCAZ7ca`X2
+Z118 V0SYO?g;gQ0A=9TemX@WA[0
 R4
-Z118 w1518983513
-Z119 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v
-Z120 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v
+Z119 w1518983513
+Z120 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v
+Z121 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v
 L0 1
 R8
 r1
 31
+Z122 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v|
 R10
-Z121 nradix4@s@e@l@m
+Z123 nradix4@s@e@l@m
 !i10b 1
-Z122 !s100 R9XXXCJ^ZFiLloBB39c]h1
 !s85 0
-Z123 !s108 1519053220.048000
-Z124 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v|
-Z125 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v|
+Z124 !s108 1519054762.227000
+Z125 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4SELM.v|
 !s101 -O0
 vradix4WModification
 !i10b 1
-!s100 CD72j]SeNX30S8ni?kFLO0
-IhRaGAPHbCKh]X>GR:ibcz1
-Z126 VadKzjBb6jMB5lij8LZghe0
+Z126 !s100 CD72j]SeNX30S8ni?kFLO0
+Z127 IhRaGAPHbCKh]X>GR:ibcz1
+Z128 VadKzjBb6jMB5lij8LZghe0
 R4
-Z127 w1518993240
-8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v
-F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v
+Z129 w1518993240
+Z130 8//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v
+Z131 F//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v
 L0 1
 R8
 r1
 !s85 0
 31
-!s108 1519053220.333000
+!s108 1519054762.524000
 !s107 //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v|
-!s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v|
+Z132 !s90 -reportprogress|300|-work|work|//icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/proj_test/radix4WModification.v|
 !s101 -O0
 R10
-Z128 nradix4@w@modification
+Z133 nradix4@w@modification
 vSELM
-Z129 ITK^PUJzS2ES@VcKd[f3fY1
-Z130 VUl>85kll>TJRMBd]7h;dc0
+Z134 ITK^PUJzS2ES@VcKd[f3fY1
+Z135 VUl>85kll>TJRMBd]7h;dc0
 R16
 R17
 R18
 R19
-Z131 L0 198
+Z136 L0 198
 R8
 r1
 31
@@ -296,8 +296,8 @@ R21
 R22
 R23
 R10
-Z132 n@s@e@l@m
-Z133 !s100 PH0V]9GH`JFPih6[Y_@SL0
+Z137 n@s@e@l@m
+Z138 !s100 PH0V]9GH`JFPih6[Y_@SL0
 !i10b 1
 !s85 0
 !s101 -O0
