@@ -8,7 +8,7 @@ module radix4multiplier(
 	extern_reset
 	);
 
-	parameter no_of_digits = 16;
+	parameter no_of_digits = 4;
 	parameter radix_bits = 3;
 	parameter radix = 4;
 	parameter delta = 2;
@@ -40,7 +40,7 @@ module radix4multiplier(
 
 	initial
 	begin
-		counter = 4'd0;
+		counter = 5'd0;
 		W_j_1 = 0;
 		X_j_1 = 0;
 		reset = 1'b1;
@@ -104,7 +104,7 @@ module radix4multiplier(
 		
 		if (reset == 1'b1)
 		begin
-			counter = 4'd0;
+			counter = 5'd0;
 			W_j_1 = 0;
 			X_j_1 = 0;
 		end

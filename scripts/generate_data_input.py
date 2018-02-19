@@ -18,7 +18,7 @@ def main():
     #for i in range(len(sr1)):
     #    print (format(sr1[i], '09b'))
 
-    with open('.\proj_test\input_data.txt', 'w') as f:
+    with open('..\proj_test\input_data.txt', 'w') as f:
         for i in range(len(sr1)):
             sr1_str = format(sr1[i], '012b');
             sr2_str = format(sr2[i], '012b')
@@ -29,6 +29,9 @@ def main():
     
 
 def check_datavalid(data, radix_bits):
+    '''
+    This function checks and corrects incorrect input digit i.e.(-r) 
+    '''
     invalid = False
     data_out = ""
     for i in range(len(data)/radix_bits):
@@ -48,6 +51,9 @@ def check_datavalid(data, radix_bits):
 
 
 def lfsr2(seed, taps, nbits):
+    '''
+    This function generates LFSR outputs until output == input_seed 
+    '''
     sr = seed;
     while 1:
         xor = 1
@@ -64,6 +70,9 @@ def lfsr2(seed, taps, nbits):
 
 
 def lfsr(seed, taps, nbits, number_of_inputs):
+    '''
+    This function generates LFSR outputs for number_of_inputs times
+    '''
     sr = [];
     sr.append(seed);
     counter = 1;

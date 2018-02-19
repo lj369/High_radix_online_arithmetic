@@ -7,7 +7,8 @@ sim:/radix4multiplier/W_j \
 sim:/radix4multiplier/V_j \
 sim:/radix4multiplier/reset \
 sim:/radix4multiplier/full_result_sel \
-sim:/radix4multiplier/extern_reset
+sim:/radix4multiplier/extern_reset \
+sim:/radix4multiplier/counter
 force -freeze sim:/radix4multiplier/extern_reset 1 0, 0 100
 force -freeze sim:/radix4multiplier/y 000 0, 000 200, 110 300, 010 400, 010 500, 000 600
 force -freeze sim:/radix4multiplier/x 000 0, 000 200, 110 300, 010 400, 010 500, 000 600

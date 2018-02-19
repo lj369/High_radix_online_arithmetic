@@ -4,7 +4,7 @@ import re
 def main():
     last_read_f = "start";
     radix_bits = 3;
-    with open('./proj_test/output.txt', 'r') as f:
+    with open('../proj_test/output.txt', 'r') as f:
     #    while(last_read_f!=""):
         for i in range(20):
             read_f = f.readline();
@@ -15,6 +15,10 @@ def main():
             last_read_f = read_f;
 
 def calc_mult(din1, din2, dout, radix_bits):
+    '''
+    This function converts inputs from binary string to decimals and compare if din1*din2 == dout
+    
+    '''
     data1 = restore_number_from_sd(din1, radix_bits);
     data2 = restore_number_from_sd(din2, radix_bits);
     data3 = restore_number_from_sd(dout, radix_bits);
@@ -26,6 +30,10 @@ def calc_mult(din1, din2, dout, radix_bits):
         
 
 def calc_add(din1, din2, dout, radix_bits):
+    '''
+    This function converts inputs from binary string to decimals and compare if din1+din2 == dout
+    
+    '''
     data1 = restore_number_from_sd(din1, radix_bits);
     data2 = restore_number_from_sd(din2, radix_bits);
     data3 = restore_number_from_sd(dout, radix_bits);
@@ -36,6 +44,12 @@ def calc_add(din1, din2, dout, radix_bits):
     #    print "correct"
         
 def restore_number_from_sd(input_1, radix_bits):
+    """
+    This function takes SD inputs 'input_1' in form [b,b,b, b,b,b, ...,] where 'input_1' is a string with its elements as '1' or '0' or 'x' starting form MSB
+    and then convert it to decimal number
+
+    This function is normally used in converting binary numbers from a file
+    """
     input_digit_length = len(input_1)/radix_bits;
     output = 0;
     for i in range(input_digit_length):

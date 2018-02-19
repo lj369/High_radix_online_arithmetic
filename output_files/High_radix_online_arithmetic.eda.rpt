@@ -1,5 +1,5 @@
 EDA Netlist Writer report for High_radix_online_arithmetic
-Mon Feb 19 14:36:27 2018
+Mon Feb 19 15:29:46 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Feb 19 14:36:27 2018 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 19 15:29:46 2018 ;
 ; Revision Name             ; High_radix_online_arithmetic          ;
-; Top-level Entity Name     ; radix4adder_new                       ;
+; Top-level Entity Name     ; radix4multiplier                      ;
 ; Family                    ; Cyclone III                           ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Feb 19 14:36:26 2018
+    Info: Processing started: Mon Feb 19 15:29:43 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off High_radix_online_arithmetic -c High_radix_online_arithmetic
 Info (204019): Generated file High_radix_online_arithmetic_6_1200mv_85c_slow.vo in folder "/Desktop/proj/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file High_radix_online_arithmetic_6_1200mv_0c_slow.vo in folder "/Desktop/proj/simulation/modelsim/" for EDA simulation tool
@@ -99,9 +99,9 @@ Info (204019): Generated file High_radix_online_arithmetic_6_1200mv_0c_v_slow.sd
 Info (204019): Generated file High_radix_online_arithmetic_min_1200mv_0c_v_fast.sdo in folder "/Desktop/proj/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file High_radix_online_arithmetic_v.sdo in folder "/Desktop/proj/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 399 megabytes
-    Info: Processing ended: Mon Feb 19 14:36:27 2018
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 415 megabytes
+    Info: Processing ended: Mon Feb 19 15:29:46 2018
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

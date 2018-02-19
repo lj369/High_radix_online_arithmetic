@@ -1,5 +1,5 @@
 Analysis & Synthesis report for High_radix_online_arithmetic
-Mon Feb 19 14:36:02 2018
+Mon Feb 19 15:29:16 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -13,11 +13,34 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |radix4adder_new
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |radix4multiplier
+ 13. Parameter Settings for User Entity Instance: onTheFlyConverterSignedDigit:CA_X
+ 14. Parameter Settings for User Entity Instance: onTheFlyConverterSignedDigit:CA_Y
+ 15. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1
+ 16. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y
+ 17. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|negateX:negate1
+ 18. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|radix4adder_new:adder_pos_two
+ 19. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x
+ 20. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|negateX:negate1
+ 21. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|radix4adder_new:adder_pos_two
+ 22. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4adder_new:adder_1
+ 23. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4adder_new:adder_2
+ 24. Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4SELM:selm_1
+ 25. Parameter Settings for User Entity Instance: negateX:negate_p
+ 26. Parameter Settings for User Entity Instance: radix4adder_new:adder_2
+ 27. Parameter Settings for User Entity Instance: radix4WModification:W_modification
+ 28. Port Connectivity Checks: "radix4adder_new:adder_2"
+ 29. Port Connectivity Checks: "radix4calcVj:Vj_1|radix4adder_new:adder_2"
+ 30. Port Connectivity Checks: "radix4calcVj:Vj_1|radix4adder_new:adder_1"
+ 31. Port Connectivity Checks: "radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|radix4adder_new:adder_pos_two"
+ 32. Port Connectivity Checks: "radix4calcVj:Vj_1"
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 19 14:36:02 2018            ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 19 15:29:16 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; High_radix_online_arithmetic                     ;
-; Top-level Entity Name              ; radix4adder_new                                  ;
+; Top-level Entity Name              ; radix4multiplier                                 ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 80                                               ;
-;     Total combinational functions  ; 80                                               ;
-;     Dedicated logic registers      ; 0                                                ;
-; Total registers                    ; 0                                                ;
-; Total pins                         ; 78                                               ;
+; Total logic elements               ; 576                                              ;
+;     Total combinational functions  ; 576                                              ;
+;     Dedicated logic registers      ; 110                                              ;
+; Total registers                    ; 110                                              ;
+; Total pins                         ; 12                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -65,7 +88,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+------------------------------+
 ; Option                                                                     ; Setting            ; Default Value                ;
 +----------------------------------------------------------------------------+--------------------+------------------------------+
-; Top-level entity name                                                      ; radix4adder_new    ; High_radix_online_arithmetic ;
+; Top-level entity name                                                      ; radix4multiplier   ; High_radix_online_arithmetic ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX                ;
 ; Use smart compilation                                                      ; Off                ; Off                          ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                           ;
@@ -155,61 +178,125 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; src/radix4adder_new.v            ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4adder_new.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                 ; Library ;
++------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+; src/radix4SELM.v                   ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4SELM.v                   ;         ;
+; src/radix4DigitMultiply.v          ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4DigitMultiply.v          ;         ;
+; src/radix4calcVj.v                 ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4calcVj.v                 ;         ;
+; src/radix4multiplier.v             ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4multiplier.v             ;         ;
+; src/radix4adder_new.v              ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4adder_new.v              ;         ;
+; src/onTheFlyConverterSignedDigit.v ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/onTheFlyConverterSignedDigit.v ;         ;
+; src/negateX.v                      ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/negateX.v                      ;         ;
+; src/radix4WModification.v          ; yes             ; User Verilog HDL File  ; //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v          ;         ;
++------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 80            ;
-;                                             ;               ;
-; Total combinational functions               ; 80            ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 48            ;
-;     -- 3 input functions                    ; 16            ;
-;     -- <=2 input functions                  ; 16            ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 64            ;
-;     -- arithmetic mode                      ; 16            ;
-;                                             ;               ;
-; Total registers                             ; 0             ;
-;     -- Dedicated logic registers            ; 0             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 78            ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-; Maximum fan-out node                        ; din1[0]~input ;
-; Maximum fan-out                             ; 4             ;
-; Total fan-out                               ; 377           ;
-; Average fan-out                             ; 1.60          ;
-+---------------------------------------------+---------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 576       ;
+;                                             ;           ;
+; Total combinational functions               ; 576       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 298       ;
+;     -- 3 input functions                    ; 146       ;
+;     -- <=2 input functions                  ; 132       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 511       ;
+;     -- arithmetic mode                      ; 65        ;
+;                                             ;           ;
+; Total registers                             ; 110       ;
+;     -- Dedicated logic registers            ; 110       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 12        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 110       ;
+; Total fan-out                               ; 2231      ;
+; Average fan-out                             ; 3.14      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |radix4adder_new           ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |radix4adder_new    ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
+; |radix4multiplier                        ; 576 (36)          ; 110 (36)     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |radix4multiplier                                                                              ; work         ;
+;    |negateX:negate_p|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|negateX:negate_p                                                             ; work         ;
+;    |onTheFlyConverterSignedDigit:CA_X|   ; 79 (79)           ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_X                                            ; work         ;
+;    |onTheFlyConverterSignedDigit:CA_Y|   ; 139 (139)         ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_Y                                            ; work         ;
+;    |radix4WModification:W_modification|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4WModification:W_modification                                           ; work         ;
+;    |radix4adder_new:adder_2|             ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4adder_new:adder_2                                                      ; work         ;
+;    |radix4calcVj:Vj_1|                   ; 302 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1                                                            ; work         ;
+;       |radix4DigitMultiply:X_time_y|     ; 87 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y                               ; work         ;
+;          |negateX:negate1|               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|negateX:negate1               ; work         ;
+;          |radix4adder_new:adder_pos_two| ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|radix4adder_new:adder_pos_two ; work         ;
+;       |radix4DigitMultiply:Y_time_x|     ; 89 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x                               ; work         ;
+;          |negateX:negate1|               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|negateX:negate1               ; work         ;
+;          |radix4adder_new:adder_pos_two| ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|radix4adder_new:adder_pos_two ; work         ;
+;       |radix4SELM:selm_1|                ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4SELM:selm_1                                          ; work         ;
+;       |radix4adder_new:adder_1|          ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4adder_new:adder_1                                    ; work         ;
+;       |radix4adder_new:adder_2|          ; 57 (57)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |radix4multiplier|radix4calcVj:Vj_1|radix4adder_new:adder_2                                    ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; Register name                                 ; Reason for Removal                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; onTheFlyConverterSignedDigit:CA_Y|counter[0]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[0]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[1]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[1]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[2]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[2]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[3]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[3]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[4]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[4]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[5]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[5]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[6]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[6]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[7]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[7]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[8]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[8]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[9]  ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[9]  ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[10] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[10] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[11] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[11] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[12] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[12] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[13] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[13] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[14] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[14] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[15] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[15] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[16] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[16] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[17] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[17] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[18] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[18] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[19] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[19] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[20] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[20] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[21] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[21] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[22] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[22] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[23] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[23] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[24] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[24] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[25] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[25] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[26] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[26] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[27] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[27] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[28] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[28] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[29] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[29] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[30] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[30] ;
+; onTheFlyConverterSignedDigit:CA_Y|counter[31] ; Merged with onTheFlyConverterSignedDigit:CA_X|counter[31] ;
+; Total Number of Removed Registers = 32        ;                                                           ;
++-----------------------------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -217,26 +304,288 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 110   ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 73    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------+
+; Inverted Register Statistics                           ;
++----------------------------------------------+---------+
+; Inverted Register                            ; Fan out ;
++----------------------------------------------+---------+
+; reset                                        ; 91      ;
+; onTheFlyConverterSignedDigit:CA_X|counter[2] ; 3       ;
+; Total number of inverted registers = 2       ;         ;
++----------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 49 bits   ; 98 LEs        ; 49 LEs               ; 49 LEs                 ; Yes        ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_X|Q_pre[5]               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_X|Q[0]                   ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_Y|Q[6]                   ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_Y|Q[9]                   ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |radix4multiplier|onTheFlyConverterSignedDigit:CA_Y|Q[10]                  ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|Selector9 ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |radix4multiplier|radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|Selector7 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |radix4multiplier ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                          ;
+; radix_bits     ; 3     ; Signed Integer                                          ;
+; radix          ; 4     ; Signed Integer                                          ;
+; delta          ; 2     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: onTheFlyConverterSignedDigit:CA_X ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                        ;
+; radix_bits     ; 3     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: onTheFlyConverterSignedDigit:CA_Y ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                        ;
+; radix_bits     ; 3     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                        ;
+; radix_bits     ; 3     ; Signed Integer                        ;
+; radix          ; 4     ; Signed Integer                        ;
+; delta          ; 2     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                                     ;
+; radix_bits     ; 3     ; Signed Integer                                                     ;
+; radix          ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|negateX:negate1 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                                                     ;
+; radix_bits     ; 3     ; Signed Integer                                                                     ;
+; radix          ; 4     ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|radix4adder_new:adder_pos_two ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; no_of_digits   ; 5     ; Signed Integer                                                                                   ;
+; radix_bits     ; 3     ; Signed Integer                                                                                   ;
+; radix          ; 4     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                                     ;
+; radix_bits     ; 3     ; Signed Integer                                                     ;
+; radix          ; 4     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|negateX:negate1 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; no_of_digits   ; 4     ; Signed Integer                                                                     ;
+; radix_bits     ; 3     ; Signed Integer                                                                     ;
+; radix          ; 4     ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4DigitMultiply:Y_time_x|radix4adder_new:adder_pos_two ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; no_of_digits   ; 5     ; Signed Integer                                                                                   ;
+; radix_bits     ; 3     ; Signed Integer                                                                                   ;
+; radix          ; 4     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4adder_new:adder_1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; no_of_digits   ; 5     ; Signed Integer                                                ;
+; radix_bits     ; 3     ; Signed Integer                                                ;
+; radix          ; 4     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4adder_new:adder_2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; no_of_digits   ; 7     ; Signed Integer                                                ;
+; radix_bits     ; 3     ; Signed Integer                                                ;
+; radix          ; 4     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4calcVj:Vj_1|radix4SELM:selm_1 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; no_of_digits   ; 7     ; Signed Integer                                          ;
+; radix_bits     ; 3     ; Signed Integer                                          ;
+; radix          ; 4     ; Signed Integer                                          ;
+; delta          ; 2     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: negateX:negate_p ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; no_of_digits   ; 1     ; Signed Integer                       ;
+; radix_bits     ; 3     ; Signed Integer                       ;
+; radix          ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radix4adder_new:adder_2 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; no_of_digits   ; 7     ; Signed Integer                              ;
+; radix_bits     ; 3     ; Signed Integer                              ;
+; radix          ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |radix4adder_new ;
+; Parameter Settings for User Entity Instance: radix4WModification:W_modification ;
 +----------------+-------+--------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                   ;
 +----------------+-------+--------------------------------------------------------+
-; no_of_digits   ; 8     ; Signed Integer                                         ;
+; no_of_digits   ; 4     ; Signed Integer                                         ;
 ; radix_bits     ; 3     ; Signed Integer                                         ;
 ; radix          ; 4     ; Signed Integer                                         ;
+; delta          ; 2     ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "radix4adder_new:adder_2"      ;
++-------------+--------+----------+------------------------+
+; Port        ; Type   ; Severity ; Details                ;
++-------------+--------+----------+------------------------+
+; din2[17..0] ; Input  ; Info     ; Stuck at GND           ;
+; cin         ; Input  ; Info     ; Stuck at GND           ;
+; cout        ; Output ; Info     ; Explicitly unconnected ;
++-------------+--------+----------+------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "radix4calcVj:Vj_1|radix4adder_new:adder_2" ;
++--------------+--------+----------+------------------------------------+
+; Port         ; Type   ; Severity ; Details                            ;
++--------------+--------+----------+------------------------------------+
+; din1[20..15] ; Input  ; Info     ; Stuck at GND                       ;
+; din2[2..0]   ; Input  ; Info     ; Stuck at GND                       ;
+; cin          ; Input  ; Info     ; Stuck at GND                       ;
+; cout         ; Output ; Info     ; Explicitly unconnected             ;
++--------------+--------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "radix4calcVj:Vj_1|radix4adder_new:adder_1" ;
++------+--------+----------+--------------------------------------------+
+; Port ; Type   ; Severity ; Details                                    ;
++------+--------+----------+--------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                               ;
+; cout ; Output ; Info     ; Explicitly unconnected                     ;
++------+--------+----------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|radix4adder_new:adder_pos_two" ;
++------+--------+----------+-------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                  ;
+; cout ; Output ; Info     ; Explicitly unconnected                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radix4calcVj:Vj_1"                                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; sum_1     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; X_times_y ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Y_times_x ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -244,7 +593,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -254,7 +603,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Feb 19 14:35:58 2018
+    Info: Processing started: Mon Feb 19 15:29:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off High_radix_online_arithmetic -c High_radix_online_arithmetic
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file src/radix4selm.v
@@ -299,23 +648,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/arb
 Info (12021): Found 0 design units, including 0 entities, in source file radix2digitmultiply.v
 Info (12021): Found 1 design units, including 1 entities, in source file src/radix4wmodification.v
     Info (12023): Found entity 1: radix4WModification
-Info (12127): Elaborating entity "radix4adder_new" for the top level hierarchy
+Info (12127): Elaborating entity "radix4multiplier" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at radix4multiplier.v(103): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "onTheFlyConverterSignedDigit" for hierarchy "onTheFlyConverterSignedDigit:CA_X"
+Warning (10764): Verilog HDL warning at onTheFlyConverterSignedDigit.v(27): converting signed shift amount to unsigned
+Info (12128): Elaborating entity "radix4calcVj" for hierarchy "radix4calcVj:Vj_1"
+Info (12128): Elaborating entity "radix4DigitMultiply" for hierarchy "radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y"
+Info (12128): Elaborating entity "negateX" for hierarchy "radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|negateX:negate1"
+Warning (10230): Verilog HDL assignment warning at negateX.v(22): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "radix4adder_new" for hierarchy "radix4calcVj:Vj_1|radix4DigitMultiply:X_time_y|radix4adder_new:adder_pos_two"
 Warning (10230): Verilog HDL assignment warning at radix4adder_new.v(41): truncated value with size 32 to match size of target (3)
 Warning (10230): Verilog HDL assignment warning at radix4adder_new.v(45): truncated value with size 32 to match size of target (3)
 Warning (10230): Verilog HDL assignment warning at radix4adder_new.v(50): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "radix4adder_new" for hierarchy "radix4calcVj:Vj_1|radix4adder_new:adder_2"
+Warning (10230): Verilog HDL assignment warning at radix4adder_new.v(41): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at radix4adder_new.v(45): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at radix4adder_new.v(50): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "radix4SELM" for hierarchy "radix4calcVj:Vj_1|radix4SELM:selm_1"
+Info (12128): Elaborating entity "negateX" for hierarchy "negateX:negate_p"
+Warning (10230): Verilog HDL assignment warning at negateX.v(22): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "radix4WModification" for hierarchy "radix4WModification:W_modification"
+Warning (10230): Verilog HDL assignment warning at radix4WModification.v(21): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at radix4WModification.v(26): truncated value with size 32 to match size of target (3)
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file /Desktop/proj/output_files/High_radix_online_arithmetic.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 51 input pins
-    Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 80 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 471 megabytes
-    Info: Processing ended: Mon Feb 19 14:36:03 2018
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:02
+Info (21057): Implemented 596 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 584 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 470 megabytes
+    Info: Processing ended: Mon Feb 19 15:29:16 2018
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
