@@ -1,0 +1,7 @@
+**
+!/proj_test
+!/scripts
+!/src
+!/*.qpf
+!/*.qsf
+!/.gitignore

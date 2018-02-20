@@ -1,4 +1,0 @@
-module radix2adderSerial(din1p, din1n, din2p, din2n, clk, doutp, doutn);
-
-	input din1p, din1n, din2p, din2n, clk;
-	output doutp, doutn;
