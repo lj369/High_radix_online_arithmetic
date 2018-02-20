@@ -13,7 +13,6 @@ module negateX(
 	genvar i;
 	
 	generate
-	// start generation
 	for (i=0; i<no_of_digits; i=i+1)
 	begin : loop_gen_block_1
 		always @ (x_in)
