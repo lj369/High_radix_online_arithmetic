@@ -1,0 +1,15 @@
+module test(din1, din2, cin, dout, cout)
+
+	parameter no_of_digits = 8;
+	parameter radix_bits = 3;
+	parameter radix = 4;
+	
+	output signed [1:0] cout;
+	output signed [no_of_digits-1:0][radix_bits-1:0] dout;
+	input signed [no_of_digits-1:0][radix_bits-1:0] din1, din2;
+	input cin;
+
+	radix4adder_sv T1 (din1, din2, cin, dout, cout);
+
+
+endmodule

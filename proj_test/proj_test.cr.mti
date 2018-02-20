@@ -1,0 +1,71 @@
+../src/radix4MultiplierTestbench.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4MultiplierTestbench.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4MultiplierTestbench
+
+Top level modules:
+	radix4MultiplierTestbench
+
+} {} {}} ../src/radix4multiplier.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4multiplier.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4multiplier
+
+Top level modules:
+	radix4multiplier
+
+} {} {}} ../src/radix4calcVj.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4calcVj.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4calcVj
+
+Top level modules:
+	radix4calcVj
+
+} {} {}} ../src/radix4AdderTestbench.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4AdderTestbench.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4AdderTestbench
+
+Top level modules:
+	radix4AdderTestbench
+
+} {} {}} ../src/onTheFlyConverterSignedDigit.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/onTheFlyConverterSignedDigit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module onTheFlyConverterSignedDigit
+
+Top level modules:
+	onTheFlyConverterSignedDigit
+
+} {} {}} ../src/arbitraryRadixAdderTestbench.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/arbitraryRadixAdderTestbench.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module arbitraryRadixAdderTestbench
+
+Top level modules:
+	arbitraryRadixAdderTestbench
+
+} {} {}} ../src/radix4WModification.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4WModification.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4WModification
+
+Top level modules:
+	radix4WModification
+
+} {} {}} ../src/radix4SELM.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4SELM.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4SELM
+
+Top level modules:
+	radix4SELM
+
+} {} {}} ../src/radix4DigitMultiply.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4DigitMultiply.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4DigitMultiply
+
+Top level modules:
+	radix4DigitMultiply
+
+} {} {}} ../src/radix4adder_new.v {1 {vlog -work work //icnas4.cc.ic.ac.uk/jl14314/Desktop/proj/src/radix4adder_new.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module radix4adder_new
+
+Top level modules:
+	radix4adder_new
+
+} {} {}}

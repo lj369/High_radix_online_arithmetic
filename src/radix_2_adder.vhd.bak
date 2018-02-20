@@ -1,0 +1,16 @@
+entity radix_2_adder is
+	port(
+		din1p, din1n, din2p, din2n, cin, clk: in std_logic
+		doutp, doutn, cout: out std_logic
+	);
+	
+architecture struct of radix_2_adder is
+begin
+	
+	
+	process()
+	begin
+		
+	end
+
+end

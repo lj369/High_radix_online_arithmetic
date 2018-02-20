@@ -1,0 +1,12 @@
+add wave doutp
+add wave doutn
+add wave din1p
+add wave din1n
+add wave din2p
+add wave din2n
+add wave clk
+add wave fa1c
+add wave fa1s
+add wave fa2c
+add wave fa2s
+force clk 0 0, 1 10ns -repeat 20ns
