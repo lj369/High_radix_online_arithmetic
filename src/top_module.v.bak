@@ -1,0 +1,32 @@
+module top_level
+#(
+	parameter LFSR_SIZE = 32,
+	parameter no_of_digits = 8,
+	parameter radix_bits = 3, // = 1+log2(radix) 
+	parameter radix = 4,
+	parameter no_of_mem_bits = 3,
+	parameter address_width = 14, // = floor(log2(floor(5662720/(no_of_digits+1)/radix_bits/burst_index))) 
+	parameter max_ram_address = 1024, // = 2^address_width 
+	parameter burst_index = 8,
+	parameter target_frequency = "400.000000 MHz",
+	parameter target_frequency_2 = "50.000000 MHz" // = target_frequency/burst_index 
+)
+
+(
+	clkin_125
+);
+	
+	input wire clkin_125;
+	wire variable_clk;
+	wire variable_clk_2;
+
+
+	pll3 #(target_frequency, target_frequency_2) pll_2(
+		.refclk(clkin_125),   //  refclk.clk
+		.rst(pll_rst),      //   reset.reset
+		.outclk_0(variable_clk), // outclk0.clk
+		.outclk_1(variable_clk_2),
+		.locked(pll_locked) 
+	);
+
+endmodule

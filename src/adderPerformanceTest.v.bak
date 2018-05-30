@@ -1,0 +1,11 @@
+module adderPerformanceTest(
+	
+);
+
+	parameter no_of_digits = 8;
+	parameter radix_bits = 3;
+	parameter radix = 4;
+
+	reg 
+
+endmodule

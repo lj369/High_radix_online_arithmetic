@@ -1,0 +1,52 @@
+module ctr_block(
+	variable_clk,
+	enable_2,
+	enable,
+	reset,
+	transfer_done
+);
+
+
+	input wire transfer_done;
+	reg [address_width-1:0] counter;
+	output reg enable;
+	output reg enable_2;
+	output reg reset;
+	
+	
+	initial begin
+//		counter = {address_width{1'b0}};
+////		enable = 1'b0;
+////		#100 enable = 1'b1;
+		enable = 1'b1;
+		reset = 1'b0;
+//		pll_rst = 1'b0;
+//		enable_2 = 1'b0;
+	end
+//
+//	
+//	always @ (posedge variable_clk)
+//	begin : ctrl_block
+//		if (enable) begin
+//			enable_2 = 1'b1;
+//		end
+//		else begin
+//			enable_2 = 1'b0;
+//		end
+//		if (reset == 1'b1) begin
+//			reset = 1'b0;
+//		end
+//		if (transfer_done) begin
+//			counter = {address_width{1'b0}};
+//			reset = 1'b1;
+//		end
+//		if (counter <14'd16382) begin
+//			counter = counter + 14'd1;
+//			enable = 1'b1;
+//		end
+//		else begin
+//			enable = 1'b0;
+//		end
+//	end
+
+endmodule

@@ -1,24 +1,25 @@
 # -------------------------------------------------------------------------- #
 #
-# Copyright (C) 1991-2013 Altera Corporation
-# Your use of Altera Corporation's design tools, logic functions 
+# Copyright (C) 2016  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
 # and other software and tools, and its AMPP partner logic 
 # functions, and any output files from any of the foregoing 
 # (including device programming or simulation files), and any 
 # associated documentation or information are expressly subject 
-# to the terms and conditions of the Altera Program License 
-# Subscription Agreement, Altera MegaCore Function License 
-# Agreement, or other applicable license agreement, including, 
-# without limitation, that your use is for the sole purpose of 
-# programming logic devices manufactured by Altera and sold by 
-# Altera or its authorized distributors.  Please refer to the 
-# applicable agreement for further details.
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
 #
 # -------------------------------------------------------------------------- #
 #
-# Quartus II 64-Bit
-# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-# Date created = 19:16:27  November 12, 2017
+# Quartus Prime
+# Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+# Date created = 16:06:01  March 26, 2018
 #
 # -------------------------------------------------------------------------- #
 #
@@ -30,45 +31,105 @@
 #		assignment_defaults.qdf
 #
 # 2) Altera recommends that you do not modify this file. This
-#    file is updated automatically by the Quartus II software
+#    file is updated automatically by the Quartus Prime software
 #    and any changes you make may be lost or overwritten.
 #
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone III"
-set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY radix4multiplier
-set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:16:27  NOVEMBER 12, 2017"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY top_module
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:06:01  MARCH 26, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name VERILOG_FILE src/radix4SELM.v
-set_global_assignment -name VERILOG_FILE src/radix4DigitMultiply.v
-set_global_assignment -name VERILOG_FILE src/radix4calcVj.v
+set_location_assignment PIN_AC18 -to clkin_50 -comment clk_50m_fpga
+set_location_assignment PIN_Y26 -to clkin_125 -comment clk_enet_fpga_p
+set_location_assignment PIN_AA13 -to UserPushButton1
+set_location_assignment PIN_AB13 -to UserPushButton2
+set_location_assignment PIN_AK2 -to UserLED1
+set_location_assignment PIN_Y16 -to UserLED2
+set_location_assignment PIN_W15 -to UserLED3
+set_location_assignment PIN_AB17 -to UserLED4
+
+
+set_global_assignment -name VERILOG_FILE src/concatenateDout.v
+set_global_assignment -name VERILOG_FILE src/clockEnablePLL/synthesis/clockEnablePLL.v
+set_global_assignment -name QIP_FILE src/traditional_adder.qip
 set_global_assignment -name VERILOG_FILE src/test.v
+set_global_assignment -name VERILOG_FILE src/ramAddress.v
+set_global_assignment -name VERILOG_FILE src/radix4WModification.v
+set_global_assignment -name VERILOG_FILE src/radix4SELM.v
 set_global_assignment -name VERILOG_FILE src/radix4MultiplierTestbench.v
 set_global_assignment -name VERILOG_FILE src/radix4multiplier.v
+set_global_assignment -name VERILOG_FILE src/radix4DigitMultiply.v
+set_global_assignment -name VERILOG_FILE src/radix4calcVj.v
 set_global_assignment -name VERILOG_FILE src/radix4AdderTestbench.v
 set_global_assignment -name SYSTEMVERILOG_FILE src/radix4adder_sv.sv
 set_global_assignment -name VERILOG_FILE src/radix4adder_new.v
 set_global_assignment -name VERILOG_FILE src/radix4adder.v
+set_global_assignment -name VERILOG_FILE src/radix2SELM.v
 set_global_assignment -name VERILOG_FILE src/radix2multiplier.v
+set_global_assignment -name VERILOG_FILE src/radix2DigitMultiply.v
+set_global_assignment -name VERILOG_FILE src/radix2calcVj.v
 set_global_assignment -name VERILOG_FILE src/radix2adderSerialBlock.v
 set_global_assignment -name VERILOG_FILE src/radix2adderSerial.v
 set_global_assignment -name VERILOG_FILE src/radix2adderParallelBlock.v
 set_global_assignment -name VERILOG_FILE src/radix2adder.v
 set_global_assignment -name VERILOG_FILE src/onTheFlyConverterSignedDigit.v
 set_global_assignment -name VERILOG_FILE src/onTheFlyConverter.v
-set_global_assignment -name VERILOG_FILE src/convention2rbr.v
+set_global_assignment -name QIP_FILE src/onChipRam.qip
 set_global_assignment -name VERILOG_FILE src/negateX.v
+set_global_assignment -name VERILOG_FILE src/memCopyDetector.v
+set_global_assignment -name VERILOG_FILE src/masterLevel.v
+set_global_assignment -name VERILOG_FILE src/LFSRBlock.v
+set_global_assignment -name VERILOG_FILE src/LFSR.v
+set_global_assignment -name VERILOG_FILE src/convention2rbr.v
 set_global_assignment -name VERILOG_FILE src/arbitraryRadixAdderTestbench.v
-set_global_assignment -name VERILOG_FILE src/radix4WModification.v
-set_global_assignment -name VERILOG_FILE src/radix2calcVj.v
-set_global_assignment -name VERILOG_FILE src/radix2DigitMultiply.v
-set_global_assignment -name VERILOG_FILE src/radix2SELM.v
+set_global_assignment -name VERILOG_FILE src/adderPerformanceTest.v
+set_global_assignment -name VERILOG_FILE src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v
+set_global_assignment -name CDF_FILE Chain2.cdf
+set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name BDF_FILE src/top_trial.bdf
+set_global_assignment -name QIP_FILE src/pll2.qip
+set_global_assignment -name SIP_FILE src/pll2.sip
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name VERILOG_FILE src/masterLevelHPS.v
+set_global_assignment -name VERILOG_FILE src/avalon_MM_write_master.v
+set_global_assignment -name QIP_FILE src/pll3.qip
+set_global_assignment -name SIP_FILE src/pll3.sip
+set_global_assignment -name VERILOG_FILE src/ctr_block.v
+set_global_assignment -name VERILOG_FILE src/mem_speed_test.v
+set_global_assignment -name VERILOG_FILE src/data_gen_speed_test.v
+set_global_assignment -name BOARD "Cyclone V SoC Development Kit"
+set_global_assignment -name VERILOG_FILE src/single_register.v
+set_global_assignment -name VERILOG_FILE src/CinLFSR.v
+set_global_assignment -name VERILOG_FILE src/top_module.v
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE src/stp1.stp
+set_global_assignment -name SIGNALTAP_FILE src/stp1.stp
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE src/LFSRBlock_test.v
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to variable_clk
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to variable_clk_2
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to ctrl_clk
+set_global_assignment -name QIP_FILE src/pll_250_50MHz.qip
+set_global_assignment -name SIP_FILE src/pll_250_50MHz.sip
+set_global_assignment -name VERILOG_FILE src/masterLevelOneClkDomain.v
+set_global_assignment -name VERILOG_FILE src/ramAddressOneClkDomain.v
+set_global_assignment -name VERILOG_FILE src/ctrBlockOneClkDomain.v
+set_global_assignment -name VERILOG_FILE src/SRIncrementer.v
+set_global_assignment -name SIGNALTAP_FILE src/stpOneClkDomain.stp
+set_global_assignment -name VERILOG_FILE src/radix4multiplierParallel.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

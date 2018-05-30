@@ -1,0 +1,12 @@
+module single_register(
+	input din,
+	input clk,
+	output dout
+);
+
+
+	always @ (posedge clk)begin
+		dout = din;
+	end
+
+endmodule

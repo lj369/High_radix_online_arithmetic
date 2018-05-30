@@ -5,24 +5,19 @@ module onTheFlyConverter(
   Q
 );
 	parameter no_of_digits = 8;
+	parameter radix_bits = 3;
 	
-	input signed [2:0] q;
+	input signed [radix_bits-1:0] q;
 	input clk;
 	input reset;
-	output reg [no_of_digits-1:0] Q;
+	output reg [no_of_digits*(radix_bits-1)-1:0] Q;
 	
 //	reg [no_of_digits-1:0] Q;
 	reg shift_Q, shift_QM;
-	reg [no_of_digits-1:0] QM;
-	reg [1:0] Q_in, QM_in;
+	reg [no_of_digits*(radix_bits-1)-1:0] QM;
+	reg [radix_bits-1:0] Q_in, QM_in;
 	
 	initial begin
-		Q = 0;
-		QM = 0;
-	end
-	
-	always @ (posedge reset)
-	begin
 		Q = 0;
 		QM = 0;
 	end
@@ -60,6 +55,10 @@ module onTheFlyConverter(
 			QM = {QM[no_of_digits-3:0],QM_in};
 		end else begin
 			QM = {Q[no_of_digits-3:0],QM_in};
+		end
+		if (reset == 1'b1)begin
+			Q = 0;
+			QM = 0;
 		end
 	end
 	

@@ -1,0 +1,31 @@
+`timescale 1 ps / 1 ps
+
+// mem max freq: 8*73 = 584MHz
+
+module masterLevelOneClkDomain
+
+#(
+	parameter LFSR_SIZE = 32,
+	parameter no_of_digits = 10,
+	parameter radix_bits = 3, // = 1+log2(radix) 
+	parameter radix = 4,
+	parameter no_of_mem_bits = 3,
+	parameter address_width = 14, // = floor(log2(floor(5662720/(no_of_digits+1)/radix_bits/burst_index))) 
+	parameter max_ram_address = 4096, // = 2^address_width 
+	parameter burst_index = 5,
+	parameter target_frequency = "400.000000 MHz",
+	parameter target_frequency_2 = "80.000000 MHz" // = target_frequency/burst_index 
+)
+
+(
+	UserPushButton1,
+	start_signal,
+	UserLED3,
+	variable_clk,
+	variable_clk_2,
+	ctrl_clk
+);
+
+
+
+endmodule

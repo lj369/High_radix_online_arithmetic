@@ -18,7 +18,7 @@ def main():
     #for i in range(len(sr1)):
     #    print (format(sr1[i], '09b'))
 
-    with open('..\proj_test\input_data.txt', 'w') as f:
+    with open('..\data\input_data.txt', 'w') as f:
         for i in range(len(sr1)):
             sr1_str = format(sr1[i], '012b');
             sr2_str = format(sr2[i], '012b')

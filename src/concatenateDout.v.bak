@@ -1,0 +1,10 @@
+module concatenateDout
+#(
+	parameter no_of_bits = 27,
+	parameter burst_index = 6
+)
+(
+	Dout,
+	variable_clk,
+	
+);

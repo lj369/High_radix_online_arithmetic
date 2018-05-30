@@ -1,0 +1,36 @@
+module mem_speed_test
+
+(
+	parameter LFSR_SIZE = 32,
+	parameter no_of_digits = 8,
+	parameter radix_bits = 3, // = 1+log2(radix) 
+	parameter radix = 4,
+	parameter no_of_mem_bits = 3,
+	parameter address_width = 14, // = floor(log2(floor(5662720/(no_of_digits+1)/radix_bits/burst_index))) 
+	parameter max_ram_address = 16384, // = 2^address_width 
+	parameter burst_index = 8,
+	parameter target_frequency = "400.000000 MHz",
+	parameter target_frequency_2 = "50.000000 MHz" // = target_frequency/burst_index 
+
+);
+
+
+
+	ramAddress #(address_width, max_ram_address, burst_index) ramAddress_1 (
+		.clk(variable_clk_2),
+		.ram_addr(ram_addr),
+		.enable(enable),
+		.reset(reset)
+	);
+	
+	onChipRam #(no_of_digits, radix_bits, address_width, max_ram_address, burst_index) RAM_1(
+		.clock(variable_clk_2),
+		.address(ram_addr),
+		.data(mem_in),
+		.wren(enable_2&enable),
+		.q(mem_read)
+	);
+	
+
+	
+endmodule

@@ -1,16 +1,22 @@
+// max freq: 458MHz
 
-module radix4adder_new(
+module radix4adder_new
+
+#(
+	parameter no_of_digits = 8,
+	parameter radix_bits = 3,
+	parameter radix = 4
+)
+
+(
 	din1,
 	din2,
 	cin,
 	dout,
 	cout
-	);
-	parameter no_of_digits = 8;
-	parameter radix_bits = 3;
-	parameter radix = 4;
+);
+
 	localparam radix_bits_mi_2 = radix_bits - 2;
-	
 	input [no_of_digits*radix_bits-1:0] din1; 
 	input [no_of_digits*radix_bits-1:0] din2;
 	input [radix_bits-1:0] cin;

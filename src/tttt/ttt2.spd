@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="ttt2_sim/ttt2.vo" type="VERILOG" />
+ <topLevel name="ttt2" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

@@ -1,0 +1,56 @@
+module LFSRBlock
+
+#(
+	// Parameter Declarations
+	parameter no_of_digits = 8,
+	parameter LFSR_SIZE = 32,
+	parameter INIT_OFFSET = 0,
+	parameter radix_bits = 3
+)
+
+(
+	// Input Ports
+	clk,
+	enable,
+	out
+);
+
+	localparam NUM_BITS = no_of_digits * radix_bits;
+	
+	input clk;
+	input enable;
+
+	// Output Ports
+	output reg [NUM_BITS-1:0] out;
+	
+	wire [NUM_BITS-1:0] pre_out;
+	wire	[LFSR_SIZE-1:0] LFSROut [NUM_BITS-1:0];
+
+	genvar i;
+	generate
+		for (i=0; i<NUM_BITS; i=i+1)
+		begin: LFSRinst
+			LFSR
+			#(.WIDTH(LFSR_SIZE),.PRESET(i+1+INIT_OFFSET)) LSFRA 
+			(
+				.clk(clk),
+				.enable(enable),
+				.out(LFSROut[i])
+			);
+			assign pre_out[i] = LFSROut[i][0];
+		end
+
+		if (i % radix_bits == radix_bits-1)
+		begin
+			always @ (pre_out) begin : output_mask
+				if (pre_out [i:i-radix_bits+1] == {radix_bits{1'b1}}) begin
+					out[i:i-radix_bits+1] = {radix_bits{1'b0}};
+				end else begin
+					out[i:i-radix_bits+1] = pre_out [i:i-radix_bits+1];
+				end
+			end
+		end
+	endgenerate
+	
+
+endmodule

@@ -1,0 +1,16 @@
+
+module radix4multiplierParallel
+#
+(
+	
+)
+
+(
+	Xin,
+	Yin,
+	clk,
+	out,
+	full_result_sel,
+);
+
+	

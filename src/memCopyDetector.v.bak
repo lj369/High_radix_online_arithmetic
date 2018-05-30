@@ -1,0 +1,10 @@
+module memCopyDetector
+
+#(
+
+)
+
+(
+	data_in,
+	transfer_done;
+);

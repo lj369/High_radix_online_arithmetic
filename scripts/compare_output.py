@@ -5,11 +5,12 @@ def main():
     last_read_f = "start";
     radix_bits = 3;
     with open('../proj_test/output.txt', 'r') as f:
+#    with open('..\simulation\modelsim\output.txt', 'r') as f:
     #    while(last_read_f!=""):
         for i in range(20):
             read_f = f.readline();
             data = re.split('\t', read_f);
-            print data[0], data[1], data[2];
+            #print data[0], data[1], data[2];
             #calc_add(data[0], data[1], data[2], radix_bits);
             calc_mult(data[0], data[1], data[2], radix_bits);
             last_read_f = read_f;
@@ -29,7 +30,7 @@ def calc_mult(din1, din2, dout, radix_bits):
     #    print "correct"
         
 
-def calc_add(din1, din2, dout, radix_bits):
+def calc_add(din1, din2, cin, dout, radix_bits):
     '''
     This function converts inputs from binary string to decimals and compare if din1+din2 == dout
     
