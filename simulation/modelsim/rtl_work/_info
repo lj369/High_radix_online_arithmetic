@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/J_Lian/Desktop/FYP/simulation/modelsim
+vpll2
+Z1 !s110 1526860917
+!i10b 1
+!s100 9AX=N7U6[;OZ_:PUG2I0R2
+IoFS4K752VDaCE3GNPd51=2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1522172520
+8C:/Users/J_Lian/Desktop/FYP/src/pll2_sim/pll2.vo
+FC:/Users/J_Lian/Desktop/FYP/src/pll2_sim/pll2.vo
+Z3 L0 32
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1526860916.000000
+!s107 C:/Users/J_Lian/Desktop/FYP/src/pll2_sim/pll2.vo|
+!s90 -reportprogress|300|C:/Users/J_Lian/Desktop/FYP/src/pll2_sim/pll2.vo|
+!i113 1
+Z5 tCvgOpt 0
+vpll3
+R1
+!i10b 1
+!s100 47:J0E<1ZPGTcln@cSiAM1
+IfHbC@OVP32z8cZGEGMD>z2
+R2
+R0
+w1523375654
+8C:/Users/J_Lian/Desktop/FYP/src/pll3_sim/pll3.vo
+FC:/Users/J_Lian/Desktop/FYP/src/pll3_sim/pll3.vo
+R3
+R4
+r1
+!s85 0
+31
+!s108 1526860917.000000
+!s107 C:/Users/J_Lian/Desktop/FYP/src/pll3_sim/pll3.vo|
+!s90 -reportprogress|300|C:/Users/J_Lian/Desktop/FYP/src/pll3_sim/pll3.vo|
+!i113 1
+R5

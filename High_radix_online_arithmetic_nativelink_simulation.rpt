@@ -1,0 +1,21 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  d:/jlian_temp_ws/quartus/quartus/bin64/
+Quartus sim root      :  d:/jlian_temp_ws/quartus/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  High_radix_online_arithmetic.vo
+Sim SDF file          :  High_radix_online_arithmetic__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script d:/jlian_temp_ws/quartus/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File High_radix_online_arithmetic_run_msim_gate_verilog.do already exists - backing up current file as High_radix_online_arithmetic_run_msim_gate_verilog.do.bak2
+Info: Spawning ModelSim-Altera Simulation software 
