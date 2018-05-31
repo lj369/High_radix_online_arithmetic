@@ -106,14 +106,15 @@ module masterLevelOneClkDomain
 //	assign DUT_out = {DUT_cout, DUT_dout};
 
 	assign DUT_out = {3'b00, LFSR_out_2};
+	
+	wire [(no_of_digits+1)*radix_bits-1:0] DUT_test;
+	
+	assign DUT_test = {1'b0, LFSR_content};
 
 	always @ (posedge variable_clk) begin
 		mem_in = DUT_test;
 	end
 	
-	wire [(no_of_digits+1)*radix_bits-1:0] DUT_test;
-	assign DUT_test = {1'b0, LFSR_content};
-
 //	assign DUT_out = {13'd0, ram_addr};
 	
 	ramAddressOneClkDomain #(address_width, max_ram_address, burst_index) ramAddress_1 (

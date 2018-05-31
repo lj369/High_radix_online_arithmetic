@@ -1,7 +1,7 @@
 Warning (10268): Verilog HDL information at radix2adderSerial.v(24): always construct contains both blocking and non-blocking assignments File: C:/Users/J_Lian/Desktop/FYP/src/radix2adderSerial.v Line: 24
 Info (10281): Verilog HDL Declaration information at onTheFlyConverterSignedDigit.v(10): object "q" differs only in case from object "Q" in the same scope File: C:/Users/J_Lian/Desktop/FYP/src/onTheFlyConverterSignedDigit.v Line: 10
 Info (10281): Verilog HDL Declaration information at onTheFlyConverter.v(10): object "q" differs only in case from object "Q" in the same scope File: C:/Users/J_Lian/Desktop/FYP/src/onTheFlyConverter.v Line: 10
-Warning (10268): Verilog HDL information at ctr_block.v(41): always construct contains both blocking and non-blocking assignments File: C:/Users/J_Lian/Desktop/FYP/src/ctr_block.v Line: 41
+Warning (10268): Verilog HDL information at ctr_block.v(38): always construct contains both blocking and non-blocking assignments File: C:/Users/J_Lian/Desktop/FYP/src/ctr_block.v Line: 38
 Warning (10268): Verilog HDL information at top_module.v(78): always construct contains both blocking and non-blocking assignments File: C:/Users/J_Lian/Desktop/FYP/src/top_module.v Line: 78
 Warning (10268): Verilog HDL information at ramAddressOneClkDomain.v(36): always construct contains both blocking and non-blocking assignments File: C:/Users/J_Lian/Desktop/FYP/src/ramAddressOneClkDomain.v Line: 36
 Warning (10268): Verilog HDL information at ctrBlockOneClkDomain.v(40): always construct contains both blocking and non-blocking assignments File: C:/Users/J_Lian/Desktop/FYP/src/ctrBlockOneClkDomain.v Line: 40

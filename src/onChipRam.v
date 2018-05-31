@@ -53,7 +53,7 @@ module onChipRam
 	wren,
 	q);
 
-	input	[13:0]  address;
+	input	[address_width-1:0]  address;
 	input	  clock;
 	input	[(no_of_digits+1)*radix_bits*no_of_outputs-1:0]  data;
 	input	  wren;
@@ -106,7 +106,7 @@ module onChipRam
 		altsyncram_component.power_up_uninitialized = "FALSE",
 		altsyncram_component.ram_block_type = "M10K",
 		altsyncram_component.read_during_write_mode_port_a = "DONT_CARE",
-		altsyncram_component.widthad_a = 14,
+		altsyncram_component.widthad_a = address_width,
 		altsyncram_component.width_a = (no_of_digits+1)*radix_bits*no_of_outputs,
 		altsyncram_component.width_byteena_a = 1;
 

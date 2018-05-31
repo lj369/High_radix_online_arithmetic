@@ -52,6 +52,7 @@ module masterLevel
 	wire enable_2_reg; // wire which connects to output of Shift register
 	reg reset_reg;
 	reg enable_reg;
+	wire start_signal_reg;
 
 
 //	wire pll_locked;
@@ -62,26 +63,11 @@ module masterLevel
 //	wire enable_3;
 	wire transfer_done;
 	output wire start_signal;
-	
-	
-//	LFSRBlock #(no_of_digits, LFSR_SIZE, 0, radix_bits) LFSR_1 (
-//		.clk(ctrl_clk),
-//		.enable(1'b1),
-////		.enable(enable_2_reg),
-//		.out(LFSR_out_1)
-//	);
-//	
-//	LFSRBlock #(no_of_digits, LFSR_SIZE, 1451698946, radix_bits) LFSR_2 (
-//		.clk(ctrl_clk),
-//		.enable(1'b1),
-////		.enable(enable_2_reg),
-//		.out(LFSR_out_2)
-//	);
-//	
+
 
 	LFSRBlock #(1, LFSR_SIZE, 1537598292, 2) LFSR_3 (
 		.clk(ctrl_clk),
-		.reset(start_signal),
+		.reset(start_signal_reg),
 //		.enable(enable_2_reg),
 		.out(LFSR_out_3_pre)
 	);
@@ -90,7 +76,7 @@ module masterLevel
 // testing
 //	LFSRBlock #(no_of_digits+no_of_digits, LFSR_SIZE, 1451698946, radix_bits) LFSR_1 (
 //		.clk(ctrl_clk),
-//		.reset(start_signal),
+//		.reset(start_signal_reg),
 ////		.enable(enable_2_reg),
 //		.out(LFSR_out)
 //	);
@@ -99,7 +85,7 @@ module masterLevel
 	wire [LFSR_SIZE-1:0] LFSR_content;
 	LFSRBlock_test #(no_of_digits+no_of_digits, LFSR_SIZE, 1451698946, radix_bits) LFSR_1 (
 		.clk(ctrl_clk),
-		.reset(start_signal),
+		.reset(start_signal_reg),
 		.out(LFSR_content)
 	);
 
@@ -139,14 +125,7 @@ module masterLevel
 	);
 
 	
-	ramAddress #(address_width, max_ram_address, burst_index) ramAddress_1 (
-		.clk(variable_clk_2),
-		.ram_addr(ram_addr),
-		.enable(enable_reg),
-		.reset(reset_reg)
-	);
-	
-	
+
 	
 	// mem_in_reg
 	// shift register enable signal for controlling DUT data going from faster clock domain to slower clock domain
@@ -154,32 +133,14 @@ module masterLevel
 	
 	reg [burst_index-1:0] transfer_SR;
 	
-	genvar i;
-	
-	generate
-	for (i=0; i<burst_index-1; i=i+1)
-	begin : transfer_SR_gen
-	
-		always @ (posedge ctrl_clk) begin
-			if (start_signal) begin
-				transfer_SR[i+1] <= 1'b0;
-			end
-			else begin
-				transfer_SR[i+1] <= transfer_SR[i];
-			end
-		end
-
-	end
-	endgenerate
-
 	always @ (posedge ctrl_clk) begin
-		if (start_signal) begin
-			transfer_SR[0] <= 1'b1;
+		if (start_signal_reg) begin
+			transfer_SR <= {{(burst_index-2){1'b0}}, 1'b1};
 		end
 		else begin
-			transfer_SR[0] <= transfer_SR[burst_index-1];
+			transfer_SR <= {transfer_SR[burst_index-2:0], transfer_SR[burst_index-1]};
 		end
-	end 
+	end
 	
 	always @ (posedge ctrl_clk) begin
 		if (transfer_SR[0] == 1'b1) begin
@@ -188,10 +149,20 @@ module masterLevel
 	end
 	
 	
-	// enable_2_reg
-	// shift register for enable_2 signal go from slower clock domain to faster clock domain
+	// enable_2_reg 
+	// shift register for enable_2 signal goes from slower clock domain to faster clock domain
 	
 	reg [burst_index-1:0] enable_2_SR;
+	reg [burst_index-1:0] start_signal_SR;
+	
+	always @ (posedge variable_clk) begin
+		if (start_signal_reg) begin
+			transfer_SR <= {{(burst_index-2){1'b0}}, 1'b1};
+		end
+		else begin
+			transfer_SR <= {transfer_SR[burst_index-2:0], transfer_SR[burst_index-1]};
+		end
+	end
 	
 	genvar j;
 	
@@ -212,7 +183,36 @@ module masterLevel
 	endgenerate
 	
 	always @ (posedge variable_clk) begin
-		if (start_signal) begin
+		if (start_signal_reg) begin
+			enable_2_SR[0] <= 1'b0;
+		end
+		else begin
+			enable_2_SR[0] <= enable_2;
+		end
+	end
+	
+	
+	// start_signal_reg 
+	// shift register for start_signal signal goes from slower clock domain to faster clock domain
+	
+	generate
+	for (j=0; j<burst_index-1; j=j+1)
+	begin : start_signal_SR_gen
+	
+		always @ (posedge variable_clk) begin
+			if (start_signal) begin
+				enable_2_SR[j+1] <= 1'b0;
+			end
+			else begin
+				enable_2_SR[j+1] <= enable_2_SR[j];
+			end
+		end
+
+	end
+	endgenerate
+	
+	always @ (posedge variable_clk) begin
+		if (start_signal_reg) begin
 			enable_2_SR[0] <= 1'b0;
 		end
 		else begin
@@ -222,6 +222,16 @@ module masterLevel
 
 	
 	assign enable_2_reg = enable_2_SR[burst_index-2];
+	
+	assign start_signal_reg = start_signal_SR[burst_index-2];
+	
+	ramAddress #(address_width, max_ram_address, burst_index) ramAddress_1 (
+		.clk(variable_clk_2),
+		.ram_addr(ram_addr),
+		.enable(enable_reg),
+		.reset(reset_reg)
+	);
+	
 	
 	
 	onChipRam #(no_of_digits, radix_bits, address_width, max_ram_address, burst_index) RAM_1(
@@ -235,7 +245,7 @@ module masterLevel
 	memCopyDetector #(no_of_mem_bits) memCopyDetector_1(
 		.data_in(mem_read[no_of_mem_bits-1:0]),
 		.enable(enable_reg),
-		.clk(variable_clk),
+		.clk(variable_clk_2),
 		.transfer_done(transfer_done)
 	);
 	

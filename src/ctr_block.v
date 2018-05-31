@@ -11,7 +11,6 @@ module ctr_block
 	UserPushButton1,
 	variable_clk_2,
 	enable,
-	enable_2,
 	reset,
 	start_signal,
 	transfer_done
@@ -22,7 +21,6 @@ module ctr_block
 	input wire variable_clk_2;
 	reg [address_width-1:0] counter;
 	output reg enable;
-	output reg enable_2;
 	output reg reset;
 	output reg start_signal;
 	
@@ -32,7 +30,6 @@ module ctr_block
 		enable = 1'b0;
 		reset = 1'b0;
 //		pll_rst = 1'b0;
-		enable_2 = 1'b0;
 //		enable_3 = 1'b0;
 		start_signal <= 1'b1;
 	end
@@ -44,12 +41,6 @@ module ctr_block
 			start_signal <= 1'b0;
 		end
 		if (start_signal == 1'b0) begin
-			if (enable) begin
-				enable_2 = 1'b1;
-			end
-			else begin
-				enable_2 = 1'b0;
-			end
 			if (reset == 1'b1) begin
 				reset = 1'b0;
 			end

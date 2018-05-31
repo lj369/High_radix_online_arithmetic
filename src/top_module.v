@@ -5,11 +5,11 @@ module top_module
 	parameter radix_bits = 3, // = 1+log2(radix) 
 	parameter radix = 4,
 	parameter no_of_mem_bits = 3,
-	parameter address_width = 14, // = floor(log2(floor(5662720/(no_of_digits+1)/radix_bits/burst_index))) 
+	parameter address_width = 10, // = floor(log2(floor(5662720/(no_of_digits+1)/radix_bits/burst_index))) 
 	parameter max_ram_address = 1024, // = 2^address_width 
 	parameter burst_index = 5,
-	parameter target_frequency = "250.000000 MHz",
-	parameter target_frequency_2 = "50.000000 MHz" // = target_frequency/burst_index 
+	parameter target_frequency = "150.000000 MHz",
+	parameter target_frequency_2 = "30.000000 MHz" // = target_frequency/burst_index 
 )
 
 (
@@ -24,8 +24,8 @@ module top_module
 	input wire clkin_50;
 	input wire UserPushButton1;
 	wire clk;
-	wire variable_clk;
-	wire variable_clk_2;
+	wire variable_clk_f;
+	wire variable_clk_s;
 	wire ctrl_clk;
 	wire start_signal;
 	reg pll_lock_en;
@@ -49,8 +49,8 @@ module top_module
 	pll3 #(target_frequency, target_frequency_2) pll_2(
 		.refclk(clk),   //  refclk.clk
 		.rst(pll_rst),      //   reset.reset
-		.outclk_0(variable_clk), // outclk0.clk
-		.outclk_1(variable_clk_2),
+		.outclk_0(variable_clk_f), // outclk0.clk
+		.outclk_1(variable_clk_s),
 		.locked(pll_locked) 
 	);
 
@@ -99,9 +99,37 @@ module top_module
 	always @ (posedge clk) begin
 		counter = pll_relock_count;
 	end
-	
-//	masterLevelOneClkDomain
-	masterLevel
+
+
+//-------------------------------------------------	
+	// old master level instantiation
+//	
+////	masterLevelOneClkDomain
+//	masterLevel
+//	#(
+//		LFSR_SIZE, 
+//		no_of_digits, 
+//		radix_bits, 
+//		radix, 
+//		no_of_mem_bits, 
+//		address_width, 
+//		max_ram_address, 
+//		burst_index, 
+//		target_frequency, 
+//		target_frequency_2
+//	)
+//	masterLevel_Inst(
+//	.UserPushButton1(UserPushButton1_inv),
+//	.start_signal(start_signal),
+//	.enable(enable),
+//	.UserLED3(UserLED3),
+//	.variable_clk(variable_clk),
+//	.variable_clk_2(variable_clk_2),
+//	.ctrl_clk(ctrl_clk)
+//	);
+//-------------------------------------------------	
+
+	masterLevelNew
 	#(
 		LFSR_SIZE, 
 		no_of_digits, 
@@ -119,9 +147,10 @@ module top_module
 	.start_signal(start_signal),
 	.enable(enable),
 	.UserLED3(UserLED3),
-	.variable_clk(variable_clk),
-	.variable_clk_2(variable_clk_2),
+	.variable_clk_f(variable_clk_f),
+	.variable_clk_s(variable_clk_s),
 	.ctrl_clk(ctrl_clk)
 	);
+
 
 endmodule

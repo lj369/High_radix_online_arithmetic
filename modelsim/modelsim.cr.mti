@@ -13,19 +13,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	LFSR
 
-} {} {}} C:/Users/J_Lian/Desktop/FYP/src/top_module.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/top_module.v
+} {} {}} C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module top_module
+-- Compiling module onChipRam
 
 Top level modules:
-	top_module
-
-} {} {}} C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock_test.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock_test.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module LFSRBlock_test
-
-Top level modules:
-	LFSRBlock_test
+	onChipRam
 
 } {} {}} C:/Users/J_Lian/Desktop/FYP/src/concatenateDout.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/concatenateDout.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -33,13 +26,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	concatenateDout
-
-} {} {}} C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module onChipRam
-
-Top level modules:
-	onChipRam
 
 } {} {}} C:/Users/J_Lian/Desktop/FYP/src/onTheFlyConverter.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/onTheFlyConverter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -76,12 +62,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	radix4adder_new
 
-} {} {}} C:/Users/J_Lian/Desktop/FYP/src/pll3/pll3_0002.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/pll3/pll3_0002.v
+} {} {}} C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/clockEnablePLL.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/clockEnablePLL.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module pll3_0002
+-- Compiling module clockEnablePLL
 
 Top level modules:
-	pll3_0002
+	clockEnablePLL
 
 } {} {}} C:/Users/J_Lian/Desktop/FYP/src/ramAddress.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/ramAddress.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -90,12 +76,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ramAddress
 
-} {} {}} C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/clockEnablePLL.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/clockEnablePLL.v
+} {} {}} C:/Users/J_Lian/Desktop/FYP/src/pll3/pll3_0002.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/pll3/pll3_0002.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module clockEnablePLL
+-- Compiling module pll3_0002
 
 Top level modules:
-	clockEnablePLL
+	pll3_0002
+
+} {} {}} C:/Users/J_Lian/Desktop/FYP/src/signalCrossClkDomainSR.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/signalCrossClkDomainSR.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module signalCrossClkDomainSR
+
+Top level modules:
+	signalCrossClkDomainSR
 
 } {} {}} C:/Users/J_Lian/Desktop/FYP/src/masterLevelOneClkDomain.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/masterLevelOneClkDomain.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -118,6 +111,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	SRIncrementer
 
+} {} {}} C:/Users/J_Lian/Desktop/FYP/src/ramAddressOneClkDomain.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/ramAddressOneClkDomain.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ramAddressOneClkDomain
+
+Top level modules:
+	ramAddressOneClkDomain
+
 } {} {}} C:/Users/J_Lian/Desktop/FYP/src/pll2.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/pll2.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module pll2
@@ -139,18 +139,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	pll3
 
-} {} {}} C:/Users/J_Lian/Desktop/FYP/src/pll2/pll2_0002.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/pll2/pll2_0002.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module pll2_0002
-
-Top level modules:
-	pll2_0002
-
 } {} {}} C:/Users/J_Lian/Desktop/FYP/src/memCopyDetector.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/memCopyDetector.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module memCopyDetector
 
 Top level modules:
 	memCopyDetector
+
+} {} {}} C:/Users/J_Lian/Desktop/FYP/src/pll2/pll2_0002.v {1 {vlog -work work -stats=none C:/Users/J_Lian/Desktop/FYP/src/pll2/pll2_0002.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pll2_0002
+
+Top level modules:
+	pll2_0002
 
 } {} {}}
