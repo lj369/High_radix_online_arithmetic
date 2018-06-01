@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/JLian_temp_ws/quartus
 vclockEnablePLL
-Z0 !s110 1527777655
+Z0 !s110 1527862059
 !i10b 1
 !s100 N;QLeJ2l>T2PKK_lD1TZi3
 I?j[mSRD0WbU[1]@Co9R:k3
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1527777655.000000
+Z4 !s108 1527862059.000000
 !s107 C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/clockEnablePLL.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/clockEnablePLL.v|
 !i113 1
@@ -31,51 +31,51 @@ Z5 o-work work
 Z6 tCvgOpt 0
 nclock@enable@p@l@l
 vclockEnablePLL_altclkctrl_0
-Z7 !s110 1527777656
+R0
 !i10b 1
 !s100 9kZaZ6RdlR4=jO[?kM?Sm3
 IKf:MKdGiifVf56Khn@4C[3
 R1
 R2
-Z8 w1522163140
-Z9 8C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v
-Z10 FC:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v
+Z7 w1522163140
+Z8 8C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v
+Z9 FC:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v
 L0 80
 R3
 r1
 !s85 0
 31
 R4
-Z11 !s107 C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v|
-Z12 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v|
+Z10 !s107 C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/clockEnablePLL/synthesis/submodules/clockEnablePLL_altclkctrl_0.v|
 !i113 1
 R5
 R6
 nclock@enable@p@l@l_altclkctrl_0
 vclockEnablePLL_altclkctrl_0_sub
-R7
+R0
 !i10b 1
 !s100 1>TlDGDdKaK36Z5GZ`BH]3
 IAHkB?DhWdY7Q:j]]EoZ_O0
 R1
 R2
+R7
 R8
 R9
-R10
 L0 29
 R3
 r1
 !s85 0
 31
 R4
+R10
 R11
-R12
 !i113 1
 R5
 R6
 nclock@enable@p@l@l_altclkctrl_0_sub
 vconcatenateDout
-R7
+R0
 !i10b 1
 !s100 7>UM]]]a7_C;gmnJa3D5L3
 I:d?OmPU7Zg3MK]?fKGOkh3
@@ -89,7 +89,7 @@ R3
 r1
 !s85 0
 31
-Z13 !s108 1527777656.000000
+R4
 !s107 C:/Users/J_Lian/Desktop/FYP/src/concatenateDout.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/concatenateDout.v|
 !i113 1
@@ -97,7 +97,7 @@ R5
 R6
 nconcatenate@dout
 vctr_block
-R7
+R0
 !i10b 1
 !s100 m2H42z@Q`IGn?djFP`RAB2
 I6zRd7KZFPFRiZhCQT;oJW2
@@ -111,14 +111,14 @@ R3
 r1
 !s85 0
 31
-R13
+R4
 !s107 C:/Users/J_Lian/Desktop/FYP/src/ctr_block.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/ctr_block.v|
 !i113 1
 R5
 R6
 vctrBlockOneClkDomain
-Z14 !s110 1527777657
+Z12 !s110 1527862060
 !i10b 1
 !s100 EzhHE==SBfH[gbRM>@ol53
 Ie[_Tk?;U[;AbX@YO69lMS2
@@ -132,7 +132,7 @@ R3
 r1
 !s85 0
 31
-R13
+Z13 !s108 1527862060.000000
 !s107 C:/Users/J_Lian/Desktop/FYP/src/ctrBlockOneClkDomain.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/ctrBlockOneClkDomain.v|
 !i113 1
@@ -140,13 +140,13 @@ R5
 R6
 nctr@block@one@clk@domain
 vLFSR
-Z15 !s110 1527777654
+Z14 !s110 1527862057
 !i10b 1
-!s100 HDV3FCSg`60kMLz3P?JkM2
-ISNz:cV35^I_4:Lbfj6Jg]1
+!s100 E0Se0akQ@Mkj;4eYNe7393
+I:dOEH<?^I=JCl[W?B[9nU2
 R1
 R2
-w1523802844
+w1527861912
 8C:/Users/J_Lian/Desktop/FYP/src/LFSR.v
 FC:/Users/J_Lian/Desktop/FYP/src/LFSR.v
 L0 1
@@ -154,7 +154,7 @@ R3
 r1
 !s85 0
 31
-Z16 !s108 1527777654.000000
+Z15 !s108 1527862057.000000
 !s107 C:/Users/J_Lian/Desktop/FYP/src/LFSR.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/LFSR.v|
 !i113 1
@@ -162,7 +162,7 @@ R5
 R6
 n@l@f@s@r
 vLFSRBlock
-R15
+R14
 !i10b 1
 !s100 O]O7=JZPRK;Z^UB@G<[cR3
 I<9fVS@9`0TjDF4@IoBAbE3
@@ -176,7 +176,7 @@ R3
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock.v|
 !i113 1
@@ -184,13 +184,13 @@ R5
 R6
 n@l@f@s@r@block
 vLFSRBlock_test
-R7
+R12
 !i10b 1
 !s100 d:2H53hjF[Pk`C:2P38I@2
 I3J1fGJe9A2zkMLja>WHoL2
 R1
 R2
-w1527122046
+w1527779000
 8C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock_test.v
 FC:/Users/J_Lian/Desktop/FYP/src/LFSRBlock_test.v
 L0 4
@@ -198,7 +198,7 @@ R3
 r1
 !s85 0
 31
-R13
+R4
 !s107 C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock_test.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/LFSRBlock_test.v|
 !i113 1
@@ -206,7 +206,7 @@ R5
 R6
 n@l@f@s@r@block_test
 vmasterLevel
-R15
+R14
 !i10b 1
 !s100 U`MBDL3AkJ5Fn6J=J1<NR1
 I:;=A8JZ@]l`PIT]Ha7DFn2
@@ -220,7 +220,7 @@ R3
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/J_Lian/Desktop/FYP/src/masterLevel.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/masterLevel.v|
 !i113 1
@@ -228,13 +228,13 @@ R5
 R6
 nmaster@level
 vmasterLevelNew
-R14
+!s110 1527863865
 !i10b 1
-!s100 9dbKJB116451MKddeHBkB1
-IEZCn<aS1;0X7KZl3;Z[M<1
+!s100 4EY1h@T]K`Mcc690f?3[F2
+IhQ[VihbI6`<GXDG2FEZ?X3
 R1
 R2
-w1527777640
+w1527863527
 8C:/Users/J_Lian/Desktop/FYP/src/masterLevelNew.v
 FC:/Users/J_Lian/Desktop/FYP/src/masterLevelNew.v
 L0 5
@@ -242,7 +242,7 @@ R3
 r1
 !s85 0
 31
-Z17 !s108 1527777657.000000
+!s108 1527863865.000000
 !s107 C:/Users/J_Lian/Desktop/FYP/src/masterLevelNew.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/masterLevelNew.v|
 !i113 1
@@ -250,7 +250,7 @@ R5
 R6
 nmaster@level@new
 vmasterLevelOneClkDomain
-R14
+R12
 !i10b 1
 !s100 OzjdnK]0Sml>^7N2hF;T40
 I^eeIeNPkJIA7[BCWQh4cV1
@@ -264,7 +264,7 @@ R3
 r1
 !s85 0
 31
-R17
+R13
 !s107 C:/Users/J_Lian/Desktop/FYP/src/masterLevelOneClkDomain.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/masterLevelOneClkDomain.v|
 !i113 1
@@ -272,7 +272,7 @@ R5
 R6
 nmaster@level@one@clk@domain
 vmemCopyDetector
-R7
+R0
 !i10b 1
 !s100 jz`keDD0B<BbjiW15K<^o0
 I7fLK;3eWMPehAHoXICi0k3
@@ -286,7 +286,7 @@ R3
 r1
 !s85 0
 31
-R13
+R4
 !s107 C:/Users/J_Lian/Desktop/FYP/src/memCopyDetector.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/memCopyDetector.v|
 !i113 1
@@ -294,7 +294,7 @@ R5
 R6
 nmem@copy@detector
 vonChipRam
-R15
+R14
 !i10b 1
 !s100 9@?6INM^3?S6KF0ajT:<Q1
 II`Z9`XgG?Xd;3O;XXQXTn0
@@ -303,12 +303,12 @@ R2
 w1527774842
 8C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v
 FC:/Users/J_Lian/Desktop/FYP/src/onChipRam.v
-Z18 L0 40
+Z16 L0 40
 R3
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/onChipRam.v|
 !i113 1
@@ -316,7 +316,7 @@ R5
 R6
 non@chip@ram
 vonTheFlyConverter
-R15
+Z17 !s110 1527862058
 !i10b 1
 !s100 <amA2XBE8?2oS?BB18e`81
 IEOkgcTP3;n7EYO@;VMLIK0
@@ -330,7 +330,7 @@ R3
 r1
 !s85 0
 31
-R16
+Z18 !s108 1527862058.000000
 !s107 C:/Users/J_Lian/Desktop/FYP/src/onTheFlyConverter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/onTheFlyConverter.v|
 !i113 1
@@ -338,7 +338,7 @@ R5
 R6
 non@the@fly@converter
 vpll2
-R15
+R17
 !i10b 1
 !s100 NoHn[H`4n0DDT]o@gS4>F2
 I4M2]Zh>GgE6ec=VcPGXUC3
@@ -352,7 +352,7 @@ R3
 r1
 !s85 0
 31
-R16
+R18
 !s107 C:/Users/J_Lian/Desktop/FYP/src/pll2.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/pll2.v|
 !i113 1
@@ -373,14 +373,14 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/Users/J_Lian/Desktop/FYP/src/pll2/pll2_0002.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/pll2/pll2_0002.v|
 !i113 1
 R5
 R6
 vpll3
-R0
+R17
 !i10b 1
 !s100 n6QL7@F_Vnf3]g6Zla]Nh2
 I0foa??_`oRi@5e1f;JC5d2
@@ -394,14 +394,14 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/Users/J_Lian/Desktop/FYP/src/pll3.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/pll3.v|
 !i113 1
 R5
 R6
 vpll3_0002
-R0
+R17
 !i10b 1
 !s100 le]0SV^T@mO9=kaI1ig;33
 II:<kLZMY8B4<@[>N6OJaO0
@@ -415,14 +415,14 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/Users/J_Lian/Desktop/FYP/src/pll3/pll3_0002.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/pll3/pll3_0002.v|
 !i113 1
 R5
 R6
 vradix4adder_new
-R0
+R17
 !i10b 1
 !s100 4oXJmLV4OZ4VGlTe1Fzn;2
 I9Jn4Q]9_lIL>c:8Wk;Jk03
@@ -436,14 +436,14 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/Users/J_Lian/Desktop/FYP/src/radix4adder_new.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/radix4adder_new.v|
 !i113 1
 R5
 R6
 vramAddress
-R0
+R17
 !i10b 1
 !s100 54M^H;:oPKWY<geAAlCX^0
 IYY7gP@ZBaR<0CL_6cG`S81
@@ -457,7 +457,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/Users/J_Lian/Desktop/FYP/src/ramAddress.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/ramAddress.v|
 !i113 1
@@ -465,7 +465,7 @@ R5
 R6
 nram@address
 vramAddressOneClkDomain
-R7
+R12
 !i10b 1
 !s100 3^[S5heN>?D[9^7nAA>Jk0
 INGBbN1PEA2C]@58Zl72Uf0
@@ -487,13 +487,13 @@ R5
 R6
 nram@address@one@clk@domain
 vsignalCrossClkDomainSR
-R14
+R12
 !i10b 1
-!s100 E[GfnzIMjU1Gf5PKdbH<m0
-I@oTOI_7B4d9[DkF544]BP3
+!s100 3ASI1Neo>Z@]emTA[bj9@0
+IJ0B]iK@PQ@Rc[_:TkJfEg3
 R1
 R2
-w1527776853
+w1527861845
 8C:/Users/J_Lian/Desktop/FYP/src/signalCrossClkDomainSR.v
 FC:/Users/J_Lian/Desktop/FYP/src/signalCrossClkDomainSR.v
 L0 1
@@ -501,7 +501,7 @@ R3
 r1
 !s85 0
 31
-R17
+R13
 !s107 C:/Users/J_Lian/Desktop/FYP/src/signalCrossClkDomainSR.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/signalCrossClkDomainSR.v|
 !i113 1
@@ -509,7 +509,7 @@ R5
 R6
 nsignal@cross@clk@domain@s@r
 vSRIncrementer
-R14
+R12
 !i10b 1
 !s100 36_DdW5k>JjKH=X@FHL4M0
 IWRo^9HB<JQcTiTJiPkznP2
@@ -523,7 +523,7 @@ R3
 r1
 !s85 0
 31
-R17
+R13
 !s107 C:/Users/J_Lian/Desktop/FYP/src/SRIncrementer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/SRIncrementer.v|
 !i113 1
@@ -531,13 +531,13 @@ R5
 R6
 n@s@r@incrementer
 vtop_module
-R7
+!s110 1527863137
 !i10b 1
-!s100 e0b=z<j:=aIJnO>CICVba2
-Ih6W?lo_o`_3_DfF9R=`9G2
+!s100 Dm>]YHUm:8R`gBfnkZkXk3
+IJ]bb5_BkCN<;E^OcD2<g]3
 R1
 R2
-w1527776477
+w1527862536
 8C:/Users/J_Lian/Desktop/FYP/src/top_module.v
 FC:/Users/J_Lian/Desktop/FYP/src/top_module.v
 L0 1
@@ -545,14 +545,14 @@ R3
 r1
 !s85 0
 31
-R13
+!s108 1527863137.000000
 !s107 C:/Users/J_Lian/Desktop/FYP/src/top_module.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/top_module.v|
 !i113 1
 R5
 R6
 vtraditional_adder
-R15
+R14
 !i10b 1
 !s100 <MJ4log<1[SiB>T0N@>4Y3
 I_[?0JN3nndZe9Go>1GSIa3
@@ -561,12 +561,12 @@ R2
 w1520259820
 8C:/Users/J_Lian/Desktop/FYP/src/traditional_adder.v
 FC:/Users/J_Lian/Desktop/FYP/src/traditional_adder.v
-R18
+R16
 R3
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/J_Lian/Desktop/FYP/src/traditional_adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/J_Lian/Desktop/FYP/src/traditional_adder.v|
 !i113 1

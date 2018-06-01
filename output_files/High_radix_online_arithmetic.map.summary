@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu May 31 16:08:54 2018
+Analysis & Synthesis Status : Successful - Fri Jun 01 16:50:29 2018
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : High_radix_online_arithmetic
 Top-level Entity Name : top_module
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2251
+Total registers : 2611
 Total pins : 6
 Total virtual pins : 0
-Total block memory bits : 261,632
+Total block memory bits : 284,672
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

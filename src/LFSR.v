@@ -19,7 +19,7 @@ module LFSR
 
    initial
    begin
-		$readmemb("C:\\Users\\J_Lian\\Desktop\\FYP\\modelsim\\work\\LFSR_taps.dat", rom);
+		$readmemb("C:\\Users\\J_Lian\\Desktop\\FYP\\src\\LFSR_taps.dat", rom);
    end
 
    always @ (*)
@@ -30,6 +30,11 @@ module LFSR
 	wire feedback;
 	assign feedback = ~^(out & feedbackmask);
 
+	initial begin
+		out <= PRESET;
+	end
+	
+	
 	always @ (posedge clk)
 	begin
 //		if (!enable)

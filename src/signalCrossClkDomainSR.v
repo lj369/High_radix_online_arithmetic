@@ -1,7 +1,8 @@
 module signalCrossClkDomainSR
 #(
 	parameter burst_index = 5,
-	parameter default_setting = {burst_index{1'b0}}
+	parameter default_setting = {burst_index{1'b0}},
+	parameter output_bit_select = burst_index-1
 )
 
 (
@@ -30,7 +31,7 @@ module signalCrossClkDomainSR
 		end
 	end
 
-	assign signal_out = SR[burst_index-1];
+	assign signal_out = SR[output_bit_select];
 
 
 endmodule

@@ -8,8 +8,8 @@ module top_module
 	parameter address_width = 10, // = floor(log2(floor(5662720/(no_of_digits+1)/radix_bits/burst_index))) 
 	parameter max_ram_address = 1024, // = 2^address_width 
 	parameter burst_index = 5,
-	parameter target_frequency = "150.000000 MHz",
-	parameter target_frequency_2 = "30.000000 MHz" // = target_frequency/burst_index 
+	parameter target_frequency = "250.000000 MHz",
+	parameter target_frequency_2 = "50.000000 MHz" // = target_frequency/burst_index 
 )
 
 (

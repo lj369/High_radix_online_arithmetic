@@ -86,7 +86,7 @@ module masterLevelNew
 // testing
 //	LFSRBlock #(no_of_digits+no_of_digits, LFSR_SIZE, 1451698946, radix_bits) LFSR_1 (
 //		.clk(ctrl_clk),
-//		.reset(start_signal_reg_f),
+//		.reset(1'b0),
 ////		.enable(enable_reg_f),
 //		.out(LFSR_out)
 //	);
@@ -119,24 +119,40 @@ module masterLevelNew
 
 
 // test
-//	concatenateDout #(no_of_digits, radix_bits, burst_index) concatenateDout_1 (
-//		.Dout(DUT_out),
-//		.variable_clk(ctrl_clk),
-//		.mem_in(mem_in)
-//	);
-
 	concatenateDout #(no_of_digits, radix_bits, burst_index) concatenateDout_1 (
 		.Dout(DUT_test),
 		.variable_clk(ctrl_clk),
 		.mem_in(mem_in)
 	);
+
+//	concatenateDout #(no_of_digits, radix_bits, burst_index) concatenateDout_1 (
+//		.Dout(DUT_test),
+//		.variable_clk(ctrl_clk),
+//		.mem_in(mem_in)
+//	);
 	
-	signalCrossClkDomainSR #(burst_index, {1'b0, 1'b1, {(burst_index-2){1'b0}}}) transfer_enable_SR (
-		.signal_in(transfer_enable),
-		.clk(ctrl_clk),
-		.reset(1'b0),
-		.signal_out(transfer_enable)
-	);
+//	signalCrossClkDomainSR #(burst_index, {{(burst_index-1){1'b0}}, 1'b1}, burst_index-1) transfer_enable_SR (
+//		.signal_in(transfer_enable),
+//		.clk(ctrl_clk),
+//		.reset(1'b0),
+//		.signal_out(transfer_enable)
+//	);
+
+	// transfer_enable_SR
+	reg [burst_index-1:0] transfer_enable_SR;
+	
+	initial begin
+		transfer_enable_SR = {{(burst_index-1){1'b0}}, 1'b1};
+	end
+
+	always @ (posedge ctrl_clk) begin
+//		if (reset) SR <= {burst_index{1'b0}};
+//		else begin
+			transfer_enable_SR <= {transfer_enable_SR[burst_index-2:0], transfer_enable_SR[burst_index-1]};
+//		end
+	end
+
+	assign transfer_enable = transfer_enable_SR[burst_index-2];
 	
 	always @ (posedge ctrl_clk) begin
 		if (transfer_enable) begin
@@ -152,20 +168,20 @@ module masterLevelNew
 	//  1. start_signal -> start_signal_reg_f
 	//  2. enable_reg_1_s -> enable_reg_f
 	
-	signalCrossClkDomainSR #(burst_index) enable_SR (
+	signalCrossClkDomainSR #(burst_index, 0, burst_index-1) enable_SR (
 		.signal_in(enable_reg_1_s),
 		.clk(variable_clk_f),
 		.reset(1'b0),
 		.signal_out(enable_reg_f)
 	);
 	
-//	signalCrossClkDomainSR #(burst_index) start_sig_SR (
-//		.signal_in(start_signal),
-//		.clk(variable_clk_f),
-//		.reset(1'b0),
-//		.signal_out(start_signal_reg_f)
-//	);
-//	
+	signalCrossClkDomainSR #(burst_index) start_sig_SR (
+		.signal_in(start_signal),
+		.clk(variable_clk_f),
+		.reset(1'b0),
+		.signal_out(start_signal_reg_f)
+	);
+	
 	
 	clockEnablePLL clk_enable_pll (
 		.inclk(variable_clk_f),  //  altclkctrl_input.inclk
@@ -209,6 +225,12 @@ module masterLevelNew
 		.start_signal(start_signal),
 		.transfer_done(transfer_done)
 	);
+	
+	initial begin
+		enable_reg_1_s <= 1'b0;
+		reset_reg_s <= 1'b0;
+		enable_reg_2_s <= 1'b0;
+	end
 	
 	always @ (posedge variable_clk_s) begin
 		enable_reg_1_s <= enable;

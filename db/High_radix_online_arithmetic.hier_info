@@ -217,10 +217,10 @@ reset => out.OUTPUTSELECT
 
 |top_module|masterLevelNew:masterLevel_Inst
 UserPushButton1 => UserPushButton1.IN1
-start_signal <= ctr_block:ctr_block_1.start_signal
+start_signal <= start_signal.DB_MAX_OUTPUT_PORT_TYPE
 enable <= ctr_block:ctr_block_1.enable
 UserLED3 <= <GND>
-variable_clk_f => variable_clk_f.IN2
+variable_clk_f => variable_clk_f.IN3
 variable_clk_s => variable_clk_s.IN4
 ctrl_clk <= ctrl_clk.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -7452,7 +7452,7 @@ mem_in[163] <= mem_in[163]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mem_in[164] <= mem_in[164]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_module|masterLevelNew:masterLevel_Inst|signalCrossClkDomainSR:transfer_enable_SR
+|top_module|masterLevelNew:masterLevel_Inst|signalCrossClkDomainSR:enable_SR
 signal_in => SR.DATAA
 clk => SR[0].CLK
 clk => SR[1].CLK
@@ -7467,7 +7467,7 @@ reset => SR.OUTPUTSELECT
 signal_out <= SR[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_module|masterLevelNew:masterLevel_Inst|signalCrossClkDomainSR:enable_SR
+|top_module|masterLevelNew:masterLevel_Inst|signalCrossClkDomainSR:start_sig_SR
 signal_in => SR.DATAA
 clk => SR[0].CLK
 clk => SR[1].CLK
